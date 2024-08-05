@@ -1,0 +1,30 @@
+{
+  "name": "vilicom",
+  "version": "1.0.0",
+  "description": "Website for Air conditioning company \"Vilicom\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorDPetrov/Vilicom.git"
+  },
+  "author": "Victor Dimitrov Petrov",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/VictorDPetrov/Vilicom/issues"
+  },
+  "homepage": "https://github.com/VictorDPetrov/Vilicom#readme",
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "express-static": "^1.2.6",
+    "nodemon": "^3.1.4",
+    "router": "^1.3.8"
+  }
+}
