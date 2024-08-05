@@ -4,9 +4,9 @@ const port = 5330;
 
 const homePage = require('./routes');
 
-app.use(express.static('Routes'));
-app.use(express.static('View'));
-app.use(express.static('Controller'));
+app.use(express.static('routes'));
+app.use(express.static('view'));
+app.use(express.static('controller'));
 
 app.set('view engine', 'ejs');
 
