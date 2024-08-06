@@ -1,8 +1,8 @@
-const express = require('express');
-const app = express();
-const port = 5330;
+const express = require('express'),
+    app = express(),
+    port = 5330
 
-const homePage = require('./routes');
+const homePage = require('./routes/home');
 
 app.use(express.static('routes'));
 app.use(express.static('view'));
