@@ -3,6 +3,8 @@
 
 Разработчик: Виктор Д. Петров
 
+----------------------------------------------------------------------
+
 Website for the Air conditioning repair shop in Vidin "Vilicom".
 
 Developer: Victor Dimitrov Petrov
