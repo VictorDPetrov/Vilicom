@@ -1,0 +1,105 @@
+/* General styling for the section */
+.company-info {
+    font-family: 'Ubuntu';
+    line-height: 1.6;
+    color: #333;
+    margin: 20px 15%;
+    /* Aligns the section with margins on the sides */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left-align all text content */
+.company-info h1,
+.company-info h2,
+.company-info h3,
+.company-info p,
+.company-info ul {
+    text-align: left;
+}
+
+/* Styling for the main company name */
+.company-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2A186B;
+    margin-bottom: 20px;
+}
+
+/* Section titles */
+.management-title,
+.activities-title,
+.legacy-title,
+.services-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2A186B;
+    margin-top: 30px;
+}
+
+/* Service category headings */
+.service-category h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2A186B;
+    margin-top: 20px;
+}
+
+/* Paragraph text */
+.founding-info,
+.management-info,
+.activities-info,
+.legacy-info,
+.conclusion-info {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Unordered list styling */
+.service-category ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    /* Indent the list items */
+    font-size: 16px;
+}
+
+.service-category ul li {
+    margin-bottom: 5px;
+}
+
+/* Optional: Add hover effect on list items */
+.service-category ul li:hover {
+    color: #2A186B;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .company-info {
+        margin: 20px 5%;
+        /* Reduce side margins on smaller screens */
+        padding: 15px;
+    }
+
+    .company-name {
+        font-size: 24px;
+    }
+
+    .management-title,
+    .activities-title,
+    .legacy-title,
+    .services-title {
+        font-size: 20px;
+    }
+
+    .service-category h3 {
+        font-size: 18px;
+    }
+
+    ul {
+        margin-left: 15px;
+        /* Further reduce indent on smaller screens */
+    }
+}
