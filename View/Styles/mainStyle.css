@@ -4,6 +4,7 @@
     font-family: 'Ubuntu';
     font-size: 18px;
     text-align: center;
+    color: black;
 }
 
 .logo-button {
@@ -41,6 +42,38 @@
 /* Change the active link color */
 .navbar-nav .nav-link.active {
     color: #2A186B;
+}
+
+.container h1 {
+    font-size: 24px;
+}
+
+footer {
+    background-color: #F8F9FA; /* Dark background color */
+    color: #fff; /* Light text color for contrast */
+}
+
+.websiteBy {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    display: inline-block;
+}
+
+.websiteBy::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.websiteBy:hover::after {
+    width: 100%;
 }
 
 @media (max-width: 992px) {

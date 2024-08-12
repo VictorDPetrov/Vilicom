@@ -2,7 +2,7 @@ const express = require('express'),
     router = express.Router();
 
 router.get('/', async (req, res) => {
-    res.render('../View/forUs.ejs')
+    res.render('../View/airConditioners.ejs')
 })
 
 module.exports = router;
