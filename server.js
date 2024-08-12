@@ -6,9 +6,12 @@ const express = require('express'),
     cookieExpires = 1000 * 60 * 60;
 
 
-const database = require('./controller/database'), 
+const database = require('./controller/database'),
     homePage = require('./routes/home'),
-    forUs = require('./routes/forUs')
+    aboutUs = require('./routes/aboutUs'),
+    services = require('./routes/services'),
+    airConditioners = require('./routes/airConditioners'),
+    gallery = require('./routes/gallery')
 
 app.use(express.static('routes'));
 app.use(express.static('view'));
@@ -36,7 +39,10 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', homePage);
-app.use('/forUs', forUs);
+app.use('/aboutUs', aboutUs);
+app.use('/services', services);
+app.use('/airConditioners', airConditioners);
+app.use('/gallery', gallery);
 
 app.listen(port, () => {
     console.log(`App is listening on http://vilicom-bg.com.localhost:${port}`)
