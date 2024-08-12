@@ -1,0 +1,67 @@
+/* Hero Section */
+.hero-section {
+    background: url('./Images/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 12px;
+}
+
+.hero-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn-primary {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+/* Ensure all cards have the same height */
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body .btn {
+    margin-top: auto;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-custom {
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #1e1460;
+    /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Adds shadow on hover */
+}
+
+/* Services Section */
+#services img {
+    filter: grayscale(100%);
+    transition: filter .5s ease;
+}
+
+#services img:hover {
+    filter: none;
+}
