@@ -2,7 +2,7 @@ const express = require('express'),
     app = express(),
     port = 5330,
     session = require('express-session'),
-    sessionSecret = "sXC2fFFFDbv55sKqGjrKSWWKK!PtcqPT4adsd231w@wWExdaS@#213s",
+    sessionSecret = "i3/tH2I0EyRZyP7xu9lc4mTdoRLuZSRu8GFBB1iBkD9T1dCxa6XBKQ==",
     cookieExpires = 1000 * 60 * 60;
 
 
@@ -27,7 +27,8 @@ app.use(session({
     saveUninitialized: true,
     cookie: {
         maxAge: cookieExpires,
-        httpOnly: true
+        httpOnly: true,
+        sameSite: true
     },
 }));
 
