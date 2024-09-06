@@ -53,6 +53,21 @@
     max-width: 90%;
 }
 
+.btnAdminLogin {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 12px;
+    padding: 12px;
+    color: #fff;
+    background-color: #5B4788;
+    border-radius: 12px;
+    transition: background-color 0.5s ease;
+}
+
+.btnAdminLogin:hover {
+    background-color: #5a4788d2;
+}
+
 @media (max-width: 992px) {
     .img-responsive {
         width: 70%;
@@ -73,13 +88,14 @@
 
 
 .btn-custom {
+    color: #5B4788;
     color: white;
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-custom:hover {
-    background-color: #1e1460;
+    background-color: #5a4788d2;;
     /* Darker shade on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     /* Adds shadow on hover */
