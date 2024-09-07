@@ -7,6 +7,30 @@
     color: black;
 }
 
+/* Make sure the page takes the full viewport height */
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Container for page content */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ensure the footer stays at the bottom */
+.content-wrap {
+    flex: 1;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+}
+
 .logo-button {
     margin-left: 100px;
     background: none;
@@ -50,8 +74,10 @@
 }
 
 footer {
-    background-color: #F8F9FA; /* Dark background color */
-    color: #fff; /* Light text color for contrast */
+    background-color: #F8F9FA;
+    /* Dark background color */
+    color: #fff;
+    /* Light text color for contrast */
 }
 
 .websiteBy {
