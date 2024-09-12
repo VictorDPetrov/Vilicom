@@ -13,7 +13,8 @@ const database = require('./controller/database'),
     airConditioners = require('./routes/airConditioners'),
     gallery = require('./routes/gallery'),
     login = require('./routes/Admin/login'),
-    contact = require('./routes/contact')
+    contact = require('./routes/contact'),
+    adminHome = require('./routes/Admin/adminHome')
 
 app.use(express.static('routes'));
 app.use(express.static('view'));
@@ -48,6 +49,7 @@ app.use('/airConditioners', airConditioners);
 app.use('/gallery', gallery);
 app.use('/login', login);
 app.use('/contact', contact);
+app.use('/adminHome', adminHome);
 
 app.listen(port, () => {
     console.log(`App is listening on http://vilicom-bg.com.localhost:${port}`)
