@@ -22,6 +22,15 @@
     font-size: 1rem;
 }
 
+.section-title {
+    text-align: left;
+    font-size: 1.8rem;
+    /* Adjust the size as needed */
+    font-weight: bold;
+    color: #333;
+    /* Customize the color if needed */
+}
+
 /* Ensure all cards have the same height */
 .card {
     display: flex;
@@ -95,7 +104,8 @@
 }
 
 .btn-custom:hover {
-    background-color: #5a4788d2;;
+    background-color: #5a4788d2;
+    ;
     /* Darker shade on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     /* Adds shadow on hover */
