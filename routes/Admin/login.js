@@ -9,7 +9,7 @@ router.use(bodyParser.json());
 
 router.get('/', async (req, res) => {
     if(req.session.loggedin) {
-        res.send(`Welcome ${req.session.username}`);
+        res.redirect('/adminHome')
     }
     else {
         res.render("../View/Admin/Login.ejs");
