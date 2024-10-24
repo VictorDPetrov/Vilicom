@@ -2,7 +2,7 @@ const express = require('express'),
     app = express(),
     port = 5330,
     session = require('express-session'),
-    sessionSecret = "i3/tH2I0EyRZyP7xu9lc4mTdoRLuZSRu8GFBB1iBkD9T1dCxa6XBKQ==",
+    sessionSecret = "i3/tH2I0EyRZyP74xu9lc4mTdoRLuZSRu8GFBB1iBkD9T1dCxa6XBKQ==",
     cookieExpires = 1000 * 60 * 60;
 
 
