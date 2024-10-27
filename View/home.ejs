@@ -200,6 +200,9 @@
     </div>
   </section>
 
+  <button class="scroll-to-top" onclick="scrollToTop()">⬆ Към началото</button>
+  <br>
+
   <!-- Footer -->
   <footer class="text-center py-3">
     <p>
@@ -210,6 +213,26 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Show the button when the user scrolls down 100px
+    window.onscroll = function () {
+      const scrollButton = document.querySelector('.scroll-to-top');
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollButton.style.display = 'block';
+      } else {
+        scrollButton.style.display = 'none';
+      }
+    };
+
+    // Smooth scroll to the top
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 </body>
 
 </html>

@@ -103,6 +103,24 @@ footer {
     width: 100%;
 }
 
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2A186B;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: none;
+    /* Hidden by default */
+  }
+
+  .scroll-to-top:hover {
+    background-color: #3b2289;
+  }
 @media (max-width: 992px) {
     .logo-button {
         margin-left: 15px;
