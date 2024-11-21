@@ -5,6 +5,7 @@ const database = mysql.createPool({
   user: 'root',
   password: 'root123',
   database: 'vilicom',
+  port: 3307,
   debug: false,
   connectionLimit: 200
 });
