@@ -73,10 +73,6 @@
     transition: background-color 0.5s ease;
 }
 
-.btnAdminLogin:hover {
-    background-color: #5a4788d2;
-}
-
 @media (max-width: 992px) {
     .img-responsive {
         width: 70%;
