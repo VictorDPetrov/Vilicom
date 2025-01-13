@@ -1,0 +1,40 @@
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.links {
+    color: #5B4788;
+}
+
+.working-hours {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
+}
+
+.working-hours h5 {
+    margin-bottom: 15px;
+}
+
+.working-hours p {
+    margin: 0;
+}
+
+.working-hours .day {
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px;
+    width: 250px;
+}
+
+.working-hours .time {
+    margin-top: 10px;
+    display: block;
+}
