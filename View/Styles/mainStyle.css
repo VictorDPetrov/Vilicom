@@ -134,6 +134,11 @@ footer {
   .scroll-to-top:hover {
     background-color: #3b2289;
   }
+
+  .btnAdminLogin:hover {
+    background-color: #5a4788d2;
+}
+
 @media (max-width: 992px) {
     .logo-button {
         margin-left: 15px;
