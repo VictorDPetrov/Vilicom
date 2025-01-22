@@ -23,8 +23,38 @@
 }
 
 
+.brand-box {
+  margin-bottom: 20px;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-image {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.brand-name {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: .3s ease-in-out;
+}
+
+.brand-name:hover {
+  color: #2A186B;
+}
+
 .gallery-image {
-  max-width: 400px;
+  max-width: 600px;
   width: 100%;
   height: auto;
   margin-right: 20px;
