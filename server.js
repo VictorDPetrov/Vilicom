@@ -44,14 +44,14 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', homePage);
+app.use('/login', login);
+app.use('/logout', logout);
 app.use('/aboutUs', aboutUs);
 app.use('/services', services);
 app.use('/airConditioners', airConditioners);
 app.use('/gallery', gallery);
-app.use('/login', login);
 app.use('/contact', contact);
 app.use('/adminHome', adminHome);
-app.use('/logout', logout);
 
 app.listen(port, () => {
     console.log(`App is listening on http://vilicom-bg.com.localhost:${port}`)
