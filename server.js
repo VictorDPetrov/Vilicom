@@ -4,6 +4,7 @@ const express = require('express'),
     session = require('express-session'),
     sessionSecret = "i3/tH2I0EyRZyPo2374xu9lc4mTdoRLuZSRu8GFBB1iBkD9T1dCxa6XBKQ==",
     cookieExpires = 1000 * 60 * 60;
+    path = require('path');
 
 
 const database = require('./controller/database'),
@@ -20,6 +21,8 @@ const database = require('./controller/database'),
 app.use(express.static('routes'));
 app.use(express.static('view'));
 app.use(express.static('controller'));
+
+app.use('/static', express.static(path.join("/View/Images/Gallery", 'public')));
 
 app.set('view engine', 'ejs');
 
