@@ -15,6 +15,17 @@ const database = require('./controller/database'),
     gallery = require('./routes/gallery'),
     login = require('./routes/Admin/login'),
     contact = require('./routes/contact'),
+    alpin = require('./routes/AirCon_Pages/alpin'),
+    carrier = require('./routes/AirCon_Pages/carrier'),
+    crystal = require('./routes/AirCon_Pages/crystal'),
+    daikin = require('./routes/AirCon_Pages/daikin'),
+    general = require('./routes/AirCon_Pages/general'),
+    gree = require('./routes/AirCon_Pages/gree'),
+    hisense = require('./routes/AirCon_Pages/hisense'),
+    hitachi = require('./routes/AirCon_Pages/hitachi'),
+    mitsubishi = require('./routes/AirCon_Pages/mitsubishi'),
+    toshiba = require('./routes/AirCon_Pages/toshiba'),
+
     adminHome = require('./routes/Admin/adminHome'),
     logout = require('./routes/Admin/logout')
 
@@ -55,6 +66,17 @@ app.use('/airConditioners', airConditioners);
 app.use('/gallery', gallery);
 app.use('/contact', contact);
 app.use('/adminHome', adminHome);
+app.use('/alpin', alpin);
+app.use('/carrier', carrier);
+app.use('/crystal', crystal);
+app.use('/daikin', daikin);
+app.use('/general', general);
+app.use('/gree', gree);
+app.use('/hisense', hisense);
+app.use('/hitachi', hitachi);
+app.use('/mitsubishi', mitsubishi);
+app.use('/toshiba', toshiba);
+
 
 app.listen(port, () => {
     console.log(`App is listening on http://vilicom-bg.com.localhost:${port}`)
