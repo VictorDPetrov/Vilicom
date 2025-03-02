@@ -108,6 +108,7 @@
     <hr>
   </div>
 
+  <button class="scroll-to-top" onclick="scrollToTop()">⬆ Към началото</button>
   <br>
 
   <footer class="text-center py-3">
@@ -117,6 +118,24 @@
     </p>
   </footer>
 
+  <script>
+    window.onscroll = function () {
+      const scrollButton = document.querySelector('.scroll-to-top');
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollButton.style.display = 'block';
+      } else {
+        scrollButton.style.display = 'none';
+      }
+    };
+
+    // Smooth scroll to the top
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 </body>
 
 </html>
