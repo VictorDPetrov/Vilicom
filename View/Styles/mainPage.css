@@ -91,6 +91,12 @@
     }
 }
 
+@media (max-width: 494px) {
+    .btn-custom {
+        margin-bottom: 12px;
+    }
+}
+
 
 .btn-custom {
     color: #5B4788;
@@ -101,7 +107,6 @@
 
 .btn-custom:hover {
     background-color: #5a4788d2;
-    ;
     /* Darker shade on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     /* Adds shadow on hover */

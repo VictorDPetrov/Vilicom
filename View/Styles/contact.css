@@ -38,3 +38,9 @@
     margin-top: 10px;
     display: block;
 }
+
+@media (max-width: 770px) {
+    .card {
+        margin-bottom: 12px;
+    }
+}
