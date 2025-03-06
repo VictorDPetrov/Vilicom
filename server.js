@@ -25,7 +25,6 @@ const database = require('./controller/database'),
     hitachi = require('./routes/AirCon_Pages/hitachi'),
     mitsubishi = require('./routes/AirCon_Pages/mitsubishi'),
     toshiba = require('./routes/AirCon_Pages/toshiba'),
-
     adminHome = require('./routes/Admin/adminHome'),
     logout = require('./routes/Admin/logout')
 
