@@ -29,6 +29,9 @@ const database = require('./controller/database'),
     adminHome = require('./routes/Admin/adminHome'),
     logout = require('./routes/Admin/logout')
 
+    // Include routes
+const airConditionersRouter = require('./routes/airConditioners');
+
 app.use(express.static('routes'));
 app.use(express.static('view'));
 app.use(express.static('controller'));
@@ -36,6 +39,7 @@ app.use(express.static('controller'));
 app.use('/static', express.static(path.join("/View/Images/Gallery", 'public')));
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'View'));  // Make sure the views path is set
 
 // Session
 app.use(session({
@@ -76,6 +80,8 @@ app.use('/hisense', hisense);
 app.use('/hitachi', hitachi);
 app.use('/mitsubishi', mitsubishi);
 app.use('/toshiba', toshiba);
+// Use routes
+app.use('/airConditioners', airConditionersRouter);
 
 
 app.listen(port, () => {
