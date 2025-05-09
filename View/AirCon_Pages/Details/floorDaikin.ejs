@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfera - Daikin Детайли | Виликом</title>
+
+  <link rel="stylesheet" href="../../Styles/mainStyle.css" />
+  <link rel="stylesheet" href="../../Styles/airConditioners.css" />
+  <link rel="icon" href="../../Images/vilicomLogo.ico">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a href="/" class="navbar-brand logo-button">
+        <img src="../../Images/vilicomLogo.png" alt="Logo" width="100" height="72" class="logo-img" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto text-nav">
+          <li class="nav-item"><a class="nav-link" href="/">Начало</a></li>
+          <li class="nav-item"><a class="nav-link" href="/services">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/airConditioners">Климатици</a></li>
+          <li class="nav-item"><a class="nav-link" href="/gallery">Галерия</a></li>
+          <li class="nav-item"><a class="nav-link" href="/aboutUs">За нас</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact">Контакти</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Selection -->
+  <div class="container content-wrap page-container">
+    <h1 class="mt-4" style="color: #2A186B; text-align: left;">Изберете модел климатик</h1>
+    <select id="acModelSelect" class="form-select">
+      <option value="ururu1">FVXМ25A9</option>
+      <option value="ururu2">FVXМ35A9</option>
+      <option value="ururu3">FVXМ50A9</option>
+    </select>
+    <hr />
+
+    <div id="acDetails">
+      <div class="row" id="alpinDetails">
+        <div class="col-md-6">
+          <img src="../../Images/AC/alpin.jpeg" alt="Alpin ASW-25KTN" class="img-fluid rounded shadow-sm" />
+        </div>
+
+        <div class="col-md-6">
+          <h4 class="text-start" style="color: #2A186B; text-align: left;">Описание на продукта</h4>
+          <p class="text-start">
+            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
+          </p>
+
+          <h5 class="mt-4 text-start" style="color: #2A186B; text-align: left;">Основни характеристики:</h5>
+          <ul class="text-start" style="text-align: left;">
+            <li>Капацитет охлаждане: 2.5 kW</li>
+            <li>Капацитет отопление: 2.8 kW</li>
+            <li>Енергиен клас: A++/A+</li>
+            <li>Работа при ниски температури до -25°C</li>
+            <li>Тих режим на работа</li>
+            <li>Wi-Fi управление (по избор)</li>
+          </ul>
+
+          <h5 class="mt-4 text-start">Цена: <span style="color: green;">XXX лв</span></h5>
+
+          <a href="/contact" class="btn btn-primary mt-3">Задай въпрос</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional Technical Table -->
+    <div class="mt-5">
+      <h4 class="text-start" style="color: #2A186B; text-align: left;">Технически характеристики</h4>
+      <table class="table table-bordered mt-3">
+        <tbody>
+          <tr>
+            <th scope="row">Охлаждаща мощност</th>
+            <td>2.5 kW</td>
+          </tr>
+          <tr>
+            <th scope="row">Отоплителна мощност</th>
+            <td>2.8 kW</td>
+          </tr>
+          <tr>
+            <th scope="row">Ниво на шум (вътрешно тяло)</th>
+            <td>21-38 dB</td>
+          </tr>
+          <tr>
+            <th scope="row">Работна температура</th>
+            <td>от -25°C до +50°C</td>
+          </tr>
+          <tr>
+            <th scope="row">Размери (вътрешно тяло)</th>
+            <td>790 x 275 x 200 mm</td>
+          </tr>
+          <tr>
+            <th scope="row">Гаранция</th>
+            <td>36 месеца</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <button class="scroll-to-top" onclick="scrollToTop()">⬆ Към началото</button>
+
+  <footer class="text-center py-3">
+    <p>
+      © 2024-2025 Vilicom <br />
+      Website by: <a href="https://jarvidin.com" target="_blank" class="websiteBy">Jar Computers - Vidin</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Data for different models
+    const acData = {
+      ururu1: {
+        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        characteristics: [
+          "Капацитет охлаждане: 2.5 kW",
+          "Капацитет отопление: 2.8 kW",
+          "Енергиен клас: A++/A+",
+          "Работа при ниски температури до -25°C",
+          "Тих режим на работа",
+          "Wi-Fi управление (по избор)"
+        ],
+        price: "XXX лв",
+        image: "../../Images/AC/daikin.jpeg"
+      },
+      ururu2: {
+        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        characteristics: [
+          "Капацитет охлаждане: 2.5 kW",
+          "Капацитет отопление: 2.8 kW",
+          "Енергиен клас: A++/A+",
+          "Работа при ниски температури до -25°C",
+          "Тих режим на работа",
+          "Wi-Fi управление (по избор)"
+        ],
+        price: "XXX лв",
+        image: "../../Images/AC/daikin.jpeg"
+      },
+      ururu3: {
+        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        characteristics: [
+          "Капацитет охлаждане: 2.5 kW",
+          "Капацитет отопление: 2.8 kW",
+          "Енергиен клас: A++/A+",
+          "Работа при ниски температури до -25°C",
+          "Тих режим на работа",
+          "Wi-Fi управление (по избор)"
+        ],
+        price: "XXX лв",
+        image: "../../Images/AC/daikin.jpeg"
+      }
+    };
+
+    // Function to update the product details based on the selected model
+    function updateProductDetails() {
+      const selectedModel = document.getElementById('acModelSelect').value;
+      const ac = acData[selectedModel];
+
+      // Update image
+      document.querySelector("#acDetails .row img").src = ac.image;
+
+      // Update description
+      document.querySelector("#acDetails .row p").textContent = ac.description;
+
+      // Update characteristics list
+      const characteristicsList = document.querySelector("#acDetails .row ul");
+      characteristicsList.innerHTML = '';
+      ac.characteristics.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        characteristicsList.appendChild(li);
+      });
+
+      // Update price
+      document.querySelector("#acDetails .row .mt-4 span").textContent = ac.price;
+    }
+
+    // Event listener for dropdown change
+    document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);
+
+    // Initial call to populate the details
+    updateProductDetails();
+  </script>
+</body>
+
+</html>

@@ -27,6 +27,11 @@ const database = require('./controller/database'),
     mitsubishi = require('./routes/AirCon_Pages/mitsubishi'),
     toshiba = require('./routes/AirCon_Pages/toshiba'),
     alpinDetails = require("./routes/AirCon_Pages/Details/alpinDetails"),
+    crystalDetails = require("./routes/AirCon_Pages/Details/crystalDetails"),
+    comforaDaikin = require("./routes/AirCon_Pages/Details/comforaDaikin"),
+    perferaDaikin = require("./routes/AirCon_Pages/Details/perferaDaikin"),
+    ururuDaikin = require("./routes/AirCon_Pages/Details/ururuDaikin"),
+    floorDaikin = require("./routes/AirCon_Pages/Details/floorDaikin"),
     adminHome = require('./routes/Admin/adminHome'),
     logout = require('./routes/Admin/logout')
 
@@ -82,6 +87,11 @@ app.use('/hitachi', hitachi);
 app.use('/mitsubishi', mitsubishi);
 app.use('/toshiba', toshiba);
 app.use('/alpinDetails', alpinDetails);
+app.use('/crystalDetails', crystalDetails);
+app.use('/comforaDaikin', comforaDaikin);
+app.use('/perferaDaikin', perferaDaikin);
+app.use('/ururuDaikin', ururuDaikin);
+app.use('/floorDaikin', floorDaikin);
 // Use routes
 app.use('/airConditioners', airConditionersRouter);
 
