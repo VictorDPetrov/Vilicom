@@ -26,6 +26,7 @@ const database = require('./controller/database'),
     hitachi = require('./routes/AirCon_Pages/hitachi'),
     mitsubishi = require('./routes/AirCon_Pages/mitsubishi'),
     toshiba = require('./routes/AirCon_Pages/toshiba'),
+    alpinDetails = require("./routes/AirCon_Pages/Details/alpinDetails"),
     adminHome = require('./routes/Admin/adminHome'),
     logout = require('./routes/Admin/logout')
 
@@ -80,6 +81,7 @@ app.use('/hisense', hisense);
 app.use('/hitachi', hitachi);
 app.use('/mitsubishi', mitsubishi);
 app.use('/toshiba', toshiba);
+app.use('/alpinDetails', alpinDetails);
 // Use routes
 app.use('/airConditioners', airConditionersRouter);
 
