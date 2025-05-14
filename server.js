@@ -32,6 +32,11 @@ const database = require('./controller/database'),
     perferaDaikin = require("./routes/AirCon_Pages/Details/perferaDaikin"),
     ururuDaikin = require("./routes/AirCon_Pages/Details/ururuDaikin"),
     floorDaikin = require("./routes/AirCon_Pages/Details/floorDaikin"),
+    airHome400 = require('./routes/AirCon_Pages/Details/airHome400'),
+    shirokumaDetails = require('./routes/AirCon_Pages/Details/shirokuma'),
+    generalDetails = require("./routes/AirCon_Pages/Details/generalDetails"),
+    carrierDetails = require("./routes/AirCon_Pages/Details/carrierDetails"),
+    hisenseDetails = require("./routes/AirCon_Pages/Details/hisenseDetails"),
     adminHome = require('./routes/Admin/adminHome'),
     logout = require('./routes/Admin/logout')
 
@@ -92,6 +97,11 @@ app.use('/comforaDaikin', comforaDaikin);
 app.use('/perferaDaikin', perferaDaikin);
 app.use('/ururuDaikin', ururuDaikin);
 app.use('/floorDaikin', floorDaikin);
+app.use('/airHome400', airHome400);
+app.use('/shirokumaDetails', shirokumaDetails);
+app.use('/generalDetails', generalDetails);
+app.use('/carrierDetails', carrierDetails);
+app.use('/hisenseDetails', hisenseDetails);
 // Use routes
 app.use('/airConditioners', airConditionersRouter);
 
