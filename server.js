@@ -37,6 +37,9 @@ const database = require('./controller/database'),
     generalDetails = require("./routes/AirCon_Pages/Details/generalDetails"),
     carrierDetails = require("./routes/AirCon_Pages/Details/carrierDetails"),
     hisenseDetails = require("./routes/AirCon_Pages/Details/hisenseDetails"),
+    greeDetails = require("./routes/AirCon_Pages/Details/greeDetails"),
+    toshibaDetails = require("./routes/AirCon_Pages/Details/toshibaDetails"),
+    mitsubishiDetails = require("./routes/AirCon_Pages/Details/mitsubishiDetails"),
     adminHome = require('./routes/Admin/adminHome'),
     logout = require('./routes/Admin/logout')
 
@@ -102,6 +105,9 @@ app.use('/shirokumaDetails', shirokumaDetails);
 app.use('/generalDetails', generalDetails);
 app.use('/carrierDetails', carrierDetails);
 app.use('/hisenseDetails', hisenseDetails);
+app.use('/greeDetails', greeDetails);
+app.use('/toshibaDetails', toshibaDetails);
+app.use('/mitsubishiDetails', mitsubishiDetails);
 // Use routes
 app.use('/airConditioners', airConditionersRouter);
 
