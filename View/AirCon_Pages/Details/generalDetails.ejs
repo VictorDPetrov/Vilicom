@@ -42,13 +42,13 @@
   <div class="container content-wrap page-container">
     <h1 class="mt-4" style="color: #2A186B; text-align: left;">Изберете модел климатик</h1>
     <select id="acModelSelect" class="form-select">
-        <option value="fj9">ASHH09KNCA</option>
-        <option value="fj12">ASHH12KNCA</option>
-        <option value="fj18">ASHH18KMTE</option>
-        <option value="fj24">ASHH24KMTE</option>
-        <option value="fj9p">AGHG09KVCA - подов</option>
-        <option value="fj12p">AGHG12KVCA - подов</option>
-        <option value="fj14p">AGHG14KVCA - подов</option>
+      <option value="fj9">ASHH09KNCA</option>
+      <option value="fj12">ASHH12KNCA</option>
+      <option value="fj18">ASHH18KMTE</option>
+      <option value="fj24">ASHH24KMTE</option>
+      <option value="fj9p">AGHG09KVCA - подов</option>
+      <option value="fj12p">AGHG12KVCA - подов</option>
+      <option value="fj14p">AGHG14KVCA - подов</option>
     </select>
     <hr />
 
@@ -62,7 +62,8 @@
         <div class="col-md-6">
           <h4 class="text-start" style="color: #2A186B; text-align: left;">Описание на продукта</h4>
           <p class="text-start">
-            Моделът hit на hitachi предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
+            Моделът hit на hitachi предлага ефективно отопление и охлаждане дори при екстремни климатични условия.
+            Подходящ е както за домашна, така и за офис употреба.
           </p>
 
           <h5 class="mt-4 text-start" style="color: #2A186B; text-align: left;">Основни характеристики:</h5>
@@ -85,7 +86,7 @@
     <!-- Optional Technical Table -->
     <div class="mt-5">
       <h4 class="text-start" style="color: #2A186B; text-align: left;">Технически характеристики</h4>
-      <table class="table table-bordered mt-3">
+      <table class="table table-bordered mt-3" id="technicalTable">
         <tbody>
           <tr>
             <th scope="row">Охлаждаща мощност</th>
@@ -127,125 +128,212 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Data for different models
+    // Updated acData object with detailed info
     const acData = {
       fj9: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        description: "Fujitsu General ASHH09KNCA е стенен инверторен климатик, идеален за малки и средни помещения. Предлага висока енергийна ефективност и тих режим на работа.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане (Ном.): 2.5 kW",
+          "Капацитет отопление (Ном.): 3.2 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Работа при ниски температури (отопление): до -15°C",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Икономичен режим",
+          "Таймер за включване/изключване"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/hitachi.jpeg",
+        technicalSpecs: {
+          coolingPower: "2.5 kW (Мин:0.9/Ном:2.5/Макс:3.0)",
+          heatingPower: "3.2 kW (Мин:0.9/Ном:3.2/Макс:4.3)",
+          noiseLevelIndoor: "21-38 dB",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +24°C",
+          dimensionsIndoor: "270 x 784 x 224 мм (ВxШxД)",
+          warranty: "36 месеца"
+        }
       },
       fj12: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        description: "Fujitsu General ASHH12KNCA е стенен инверторен климатик с по-висок капацитет, подходящ за средно големи помещения. Комбинира ефективност и комфорт.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане (Ном.): 3.4 kW",
+          "Капацитет отопление (Ном.): 4.0 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Работа при ниски температури (отопление): до -15°C",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Икономичен режим",
+          "Таймер за включване/изключване"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/hitachi.jpeg",
+        technicalSpecs: {
+          coolingPower: "3.4 kW (Мин:0.9/Ном:3.4/Макс:3.9)",
+          heatingPower: "4.0 kW (Мин:0.9/Ном:4.0/Макс:5.0)",
+          noiseLevelIndoor: "22-40 dB",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +24°C",
+          dimensionsIndoor: "270 x 784 x 224 мм (ВxШxД)",
+          warranty: "36 месеца"
+        }
       },
       fj18: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        description: "Fujitsu General ASHH18KMTE е мощен стенен климатик, подходящ за големи жилищни или офис площи. Предлага отлична производителност при отопление и охлаждане.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане (Ном.): 5.2 kW",
+          "Капацитет отопление (Ном.): 6.3 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Висока производителност",
+          "Работа при ниски температури (отопление): до -15°C",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Седмичен таймер"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/hitachi.jpeg",
+        technicalSpecs: {
+          coolingPower: "5.2 kW (Мин:0.9/Ном:5.2/Макс:6.0)",
+          heatingPower: "6.3 kW (Мин:0.9/Ном:6.3/Макс:8.0)",
+          noiseLevelIndoor: "27-46 dB",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +24°C",
+          dimensionsIndoor: "295 x 950 x 230 мм (ВxШxД)",
+          warranty: "36 месеца"
+        }
       },
       fj24: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        description: "Fujitsu General ASHH24KMTE е най-мощният стенен климатик в серията, осигуряващ оптимален климат в много големи пространства. Подходящ за интензивна употреба.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане (Ном.): 7.1 kW",
+          "Капацитет отопление (Ном.): 8.0 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Изключителна мощност",
+          "Работа при ниски температури (отопление): до -15°C",
+          "Възможност за Wi-Fi управление",
+          "Тих режим на работа"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/hitachi.jpeg",
+        technicalSpecs: {
+          coolingPower: "7.1 kW (Мин:0.9/Ном:7.1/Макс:8.0)",
+          heatingPower: "8.0 kW (Мин:0.9/Ном:8.0/Макс:9.1)",
+          noiseLevelIndoor: "30-50 dB",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +24°C",
+          dimensionsIndoor: "295 x 950 x 230 мм (ВxШxД)",
+          warranty: "36 месеца"
+        }
       },
       fj9p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        description: "Подов климатик Fujitsu General AGHG09KVCA - компактно и стилно решение за отопление и охлаждане, монтира се ниско на стената.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане (Ном.): 2.5 kW",
+          "Капацитет отопление (Ном.): 3.2 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Двоен въздушен поток",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Таймер"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/hitachi.jpeg",
+        technicalSpecs: {
+          coolingPower: "2.5 kW (Мин:0.9/Ном:2.5/Макс:3.0)",
+          heatingPower: "3.2 kW (Мин:0.9/Ном:3.2/Макс:4.3)",
+          noiseLevelIndoor: "20-38 dB",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +24°C",
+          dimensionsIndoor: "600 x 740 x 200 мм (ВxШxД)",
+          warranty: "36 месеца"
+        }
       },
       fj12p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        description: "Подов климатик Fujitsu General AGHG12KVCA, предлагащ мощно отопление и охлаждане с удобството на подов монтаж.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане (Ном.): 3.4 kW",
+          "Капацитет отопление (Ном.): 4.0 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Двоен въздушен поток",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Таймер"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/hitachi.jpeg",
+        technicalSpecs: {
+          coolingPower: "3.4 kW (Мин:0.9/Ном:3.4/Макс:3.9)",
+          heatingPower: "4.0 kW (Мин:0.9/Ном:4.0/Макс:5.0)",
+          noiseLevelIndoor: "21-40 dB",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +24°C",
+          dimensionsIndoor: "600 x 740 x 200 мм (ВxШxД)",
+          warranty: "36 месеца"
+        }
       },
       fj14p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        description: "Подов климатик Fujitsu General AGHG14KVCA - идеален за по-големи помещения, съчетава висока ефективност с дискретен дизайн.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане (Ном.): 4.2 kW",
+          "Капацитет отопление (Ном.): 5.4 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Двоен въздушен поток",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Таймер"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
-      },
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/hitachi.jpeg",
+        technicalSpecs: {
+          coolingPower: "4.2 kW (Мин:0.9/Ном:4.2/Макс:4.8)",
+          heatingPower: "5.4 kW (Мин:0.9/Ном:5.4/Макс:6.0)",
+          noiseLevelIndoor: "23-42 dB",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +24°C",
+          dimensionsIndoor: "600 x 740 x 200 мм (ВxШxД)",
+          warranty: "36 месеца"
+        }
+      }
     };
 
-    // Function to update the product details based on the selected model
     function updateProductDetails() {
       const selectedModel = document.getElementById('acModelSelect').value;
       const ac = acData[selectedModel];
 
-      // Update image
-      document.querySelector("#acDetails .row img").src = ac.image;
+      if (!ac) {
+        // Handle missing data if necessary
+        // For example, clear fields or show default message
+        document.querySelector("#acDetails .row img").style.display = 'none';
+        document.querySelector("#acDetails .row p").textContent = 'Информация за модела не е налична.';
+        document.querySelector("#acDetails .row ul").innerHTML = '';
+        document.querySelector("#acDetails .row .mt-4 span").textContent = '-';
 
-      // Update description
+        // Update technical table with N/A
+        const cells = document.querySelectorAll('#technicalTable tbody td');
+        cells.forEach(cell => { cell.textContent = 'N/A'; });
+        return;
+      }
+
+      // Show image
+      const img = document.querySelector("#acDetails .row img");
+      img.style.display = 'block';
+      img.src = ac.image;
+
+      // Description
       document.querySelector("#acDetails .row p").textContent = ac.description;
 
-      // Update characteristics list
-      const characteristicsList = document.querySelector("#acDetails .row ul");
-      characteristicsList.innerHTML = '';
+      // Characteristics
+      const ul = document.querySelector("#acDetails .row ul");
+      ul.innerHTML = '';
       ac.characteristics.forEach(item => {
         const li = document.createElement('li');
         li.textContent = item;
-        characteristicsList.appendChild(li);
+        ul.appendChild(li);
       });
 
-      // Update price
+      // Price
       document.querySelector("#acDetails .row .mt-4 span").textContent = ac.price;
-    }
 
+      // Technical specs table update
+      const tdCells = document.querySelectorAll('#technicalTable tbody td');
+      if (ac.technicalSpecs) {
+        tdCells[0].textContent = ac.technicalSpecs.coolingPower || 'N/A';
+        tdCells[1].textContent = ac.technicalSpecs.heatingPower || 'N/A';
+        tdCells[2].textContent = ac.technicalSpecs.noiseLevelIndoor || 'N/A';
+        tdCells[3].textContent = ac.technicalSpecs.operatingTemp || 'N/A';
+        tdCells[4].textContent = ac.technicalSpecs.dimensionsIndoor || 'N/A';
+        tdCells[5].textContent = ac.technicalSpecs.warranty || 'N/A';
+      } else {
+        tdCells.forEach(cell => { cell.textContent = 'N/A'; });
+      }
+    }
     // Event listener for dropdown change
     document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);
 

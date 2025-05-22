@@ -58,7 +58,8 @@
         <div class="col-md-6">
           <h4 class="text-start" style="color: #2A186B; text-align: left;">Описание на продукта</h4>
           <p class="text-start">
-            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
+            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични
+            условия. Подходящ е както за домашна, така и за офис употреба.
           </p>
 
           <h5 class="mt-4 text-start" style="color: #2A186B; text-align: left;">Основни характеристики:</h5>
@@ -81,7 +82,7 @@
     <!-- Optional Technical Table -->
     <div class="mt-5">
       <h4 class="text-start" style="color: #2A186B; text-align: left;">Технически характеристики</h4>
-      <table class="table table-bordered mt-3">
+      <table class="table table-bordered mt-3" id="technicalTable">
         <tbody>
           <tr>
             <th scope="row">Охлаждаща мощност</th>
@@ -125,70 +126,171 @@
   <script>
     // Data for different models
     const acData = {
-      ururu1: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      ururu1: { // FTXZ25N (approx. 9000 BTU)
+        description: "Daikin Ururu Sarara FTXZ25N – революционен климатик, който овлажнява, изсушава, вентилира с пресен въздух, пречиства въздуха и климатизира. Произведен в Япония, с ненадминат енергиен клас A+++/A+++ за перфектен целогодишен комфорт.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 2.5 kW",
+          "Капацитет отопление (Ном.): 3.6 kW",
+          "Енергиен клас (охлаждане/отопление): A+++/A+++",
+          "Работа в режим отопление: до -20°C",
+          "Хладилен агент: R32",
+          "Ururu овлажняване (без нужда от външен източник на вода)",
+          "Sarara изсушаване (без прекомерно охлаждане)",
+          "Вентилация с пресен въздух (подава филтриран външен въздух)",
+          "Пречистване на въздуха: Flash Streamer + Автоматично почистващ се филтър",
+          "Вграден Wi-Fi адаптер (Daikin Residential Controller)",
+          "3-зонов сензор 'Интелигентно око'",
+          "Изключително тиха работа: от 19 dBA"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена", // Ururu Sarara е премиум продукт
+        image: "../../Images/AC/daikin_ururu_sarara.jpg", // Заменете с реална снимка
+        technicalSpecs: {
+          coolingPower: "2.50 kW (Мин:0.6/Ном:2.5/Макс:3.5)",
+          heatingPower: "3.60 kW (Мин:0.6/Ном:3.6/Макс:5.0)",
+          noiseLevelIndoor: "Охл: 19/26/39 dBA (Тих/Нисък/Висок)", // (Проверете точните стойности)
+          operatingTemp: "Охл: -10°C до +43°C / Отопл: -20°C до +18°C",
+          dimensionsIndoor: "295 x 798 x 372 мм (ВxШxД - Проверете, по-дълбоко е!)",
+          warranty: "36 месеца (Проверете!)"
+        }
       },
-      ururu2: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      ururu2: { // FTXZ35N (approx. 12000 BTU)
+        description: "Daikin Ururu Sarara FTXZ35N предлага уникален 5-степенен контрол на въздуха за средно големи помещения. Насладете се на перфектна влажност, свежест и чистота с върхова японска технология и енергийна ефективност A+++.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 3.5 kW",
+          "Капацитет отопление (Ном.): 5.0 kW",
+          "Енергиен клас (охлаждане/отопление): A+++/A+++",
+          "Работа в режим отопление: до -20°C",
+          "Хладилен агент: R32",
+          "Ururu овлажняване (контрол на влажността)",
+          "Sarara изсушаване (интелигентно)",
+          "Вентилация с пресен въздух",
+          "Пречистване на въздуха: Flash Streamer + Автоматично почистващ се филтър",
+          "Вграден Wi-Fi адаптер (Daikin Residential Controller)",
+          "Навигационен сензор 'Интелигентно око'",
+          "Изключително тиха работа"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin_ururu_sarara.jpg", // Заменете с реална снимка
+        technicalSpecs: {
+          coolingPower: "3.50 kW (Мин:0.6/Ном:3.5/Макс:4.1)",
+          heatingPower: "5.00 kW (Мин:0.6/Ном:5.0/Макс:6.5)",
+          noiseLevelIndoor: "Охл: 19/27/42 dBA (Тих/Нисък/Висок)", // (Проверете точните стойности)
+          operatingTemp: "Охл: -10°C до +43°C / Отопл: -20°C до +18°C",
+          dimensionsIndoor: "295 x 798 x 372 мм (ВxШxД - Проверете!)", // Често 25 и 35 са с еднакви размери
+          warranty: "36 месеца (Проверете!)"
+        }
       },
-      ururu3: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      ururu3: { // FTXZ50N (approx. 18000 BTU)
+        description: "Най-мощният модел от серията Ururu Sarara, Daikin FTXZ50N, е предназначен за големи пространства, като осигурява пълен контрол над климата – температура, влажност, свежест и чистота на въздуха, всичко това с енергиен клас A+++.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 5.0 kW",
+          "Капацитет отопление (Ном.): 6.3 kW",
+          "Енергиен клас (охлаждане/отопление): A+++/A+++",
+          "Работа в режим отопление: до -20°C",
+          "Хладилен агент: R32",
+          "Ururu овлажняване (с висока производителност)",
+          "Sarara изсушаване (ефективно)",
+          "Вентилация с пресен въздух (за по-големи обеми)",
+          "Пречистване на въздуха: Flash Streamer + Автоматично почистващ се филтър",
+          "Вграден Wi-Fi адаптер (Daikin Residential Controller)",
+          "Разширени функции на 'Интелигентно око'",
+          "Много тиха работа дори при висок капацитет"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin_ururu_sarara.jpg", // Заменете с реална снимка
+        technicalSpecs: {
+          coolingPower: "5.00 kW (Мин:0.6/Ном:5.0/Макс:5.8)",
+          heatingPower: "6.30 kW (Мин:0.6/Ном:6.3/Макс:9.4)",
+          noiseLevelIndoor: "Охл: 23/32/47 dBA (Тих/Нисък/Висок)", // (Проверете точните стойности)
+          operatingTemp: "Охл: -10°C до +43°C / Отопл: -20°C до +18°C",
+          dimensionsIndoor: "295 x 798 x 372 мм (ВxШxД - Проверете!)", // Възможно е да е същият корпус, но проверете
+          warranty: "36 месеца (Проверете!)"
+        }
       }
     };
 
-    // Function to update the product details based on the selected model
     function updateProductDetails() {
-      const selectedModel = document.getElementById('acModelSelect').value;
-      const ac = acData[selectedModel];
+      const selectedModelValue = document.getElementById('acModelSelect').value;
+      const ac = acData[selectedModelValue];
 
-      // Update image
-      document.querySelector("#acDetails .row img").src = ac.image;
+      if (!ac) {
+        console.error("Данни за модела не са намерени:", selectedModelValue);
+        // Почистване на полетата или показване на съобщение за грешка
+        const productImage = document.querySelector("#acDetails .row img");
+        if (productImage) productImage.style.display = 'none';
+        const productDescription = document.querySelector("#acDetails .row p");
+        if (productDescription) productDescription.textContent = 'Информацията за избрания модел не е налична.';
+        const characteristicsList = document.querySelector("#acDetails .row ul");
+        if (characteristicsList) characteristicsList.innerHTML = '';
+        const productPrice = document.querySelector("#acDetails .row .mt-4 span");
+        if (productPrice) productPrice.textContent = '-';
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          cells.forEach(cell => cell.textContent = 'N/A');
+        }
+        return;
+      }
 
-      // Update description
-      document.querySelector("#acDetails .row p").textContent = ac.description;
+      const productImageVisible = document.querySelector("#acDetails .row img");
+      if (productImageVisible) productImageVisible.style.display = 'block';
 
-      // Update characteristics list
+      const productImage = document.querySelector("#acDetails .row img");
+      if (productImage) {
+        productImage.src = ac.image;
+        const selectedOptionText = document.getElementById('acModelSelect').options[document.getElementById('acModelSelect').selectedIndex].text;
+        productImage.alt = "Климатик Daikin Ururu Sarara " + selectedOptionText;
+      }
+
+      const productDescription = document.querySelector("#acDetails .row p");
+      if (productDescription) {
+        productDescription.textContent = ac.description;
+      }
+
       const characteristicsList = document.querySelector("#acDetails .row ul");
-      characteristicsList.innerHTML = '';
-      ac.characteristics.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        characteristicsList.appendChild(li);
-      });
+      if (characteristicsList) {
+        characteristicsList.innerHTML = '';
+        if (ac.characteristics && Array.isArray(ac.characteristics)) {
+          ac.characteristics.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            characteristicsList.appendChild(li);
+          });
+        }
+      }
 
-      // Update price
-      document.querySelector("#acDetails .row .mt-4 span").textContent = ac.price;
+      const productPrice = document.querySelector("#acDetails .row .mt-4 span");
+      if (productPrice) {
+        productPrice.textContent = ac.price;
+      }
+
+      if (ac.technicalSpecs) {
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          if (cells.length >= 6) {
+            cells[0].textContent = ac.technicalSpecs.coolingPower || 'N/A';
+            cells[1].textContent = ac.technicalSpecs.heatingPower || 'N/A';
+            cells[2].textContent = ac.technicalSpecs.noiseLevelIndoor || 'N/A';
+            cells[3].textContent = ac.technicalSpecs.operatingTemp || 'N/A';
+            cells[4].textContent = ac.technicalSpecs.dimensionsIndoor || 'N/A';
+            cells[5].textContent = ac.technicalSpecs.warranty || 'N/A';
+          }
+        }
+      } else {
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          cells.forEach(cell => cell.textContent = 'N/A');
+        }
+      }
     }
+
+    document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      updateProductDetails();
+    });
 
     // Event listener for dropdown change
     document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);

@@ -42,79 +42,79 @@
   <div class="container content-wrap page-container">
     <h1 class="mt-4" style="color: #2A186B; text-align: left;">Изберете модел климатик</h1>
     <select id="acModelSelect" class="form-select">
-        <option value="fj9">Premium SRK25ZS-W</option>
-        <option value="fj12">Premium SRK35ZS-W</option>
-        <option value="fj18">Premium SRK50ZS-W</option>
-        <option value="fj24">Smart Plus SRK25ZTL-W</option>
-        <option value="fj9p">Smart Plus SRK35ZTL-W</option>
-        <option value="fj12p">Smart Plus SRK50ZTL-W</option>
-        <option value="fj14p">Diamond SRK25ZSX-W</option>
-        <option value="fj16p">Diamond SRK35ZSX-W</option>
-        <option value="fj16p">Diamond SRK50ZSX-W</option>
-        <option value="fj16p">Подов SRF25ZS-W</option>
-        <option value="fj16p">Подов SRF35ZS-W</option>
-        <option value="fj16p">Подов SRF50ZSX-W</option>
+      <option value="premium25">Premium SRK25ZS-W</option>
+      <option value="premium35">Premium SRK35ZS-W</option>
+      <option value="premium50">Premium SRK50ZS-W</option>
+      <option value="smart25">Smart Plus SRK25ZTL-W</option>
+      <option value="smart35">Smart Plus SRK35ZTL-W</option>
+      <option value="smart50">Smart Plus SRK50ZTL-W</option>
+      <option value="diamond25">Diamond SRK25ZSX-W</option>
+      <option value="diamond35">Diamond SRK35ZSX-W</option>
+      <option value="diamond50">Diamond SRK50ZSX-W</option>
+      <option value="floor25">Подов SRF25ZS-W</option>
+      <option value="floor35">Подов SRF35ZS-W</option>
+      <option value="floor50">Подов SRF50ZSX-W</option>
     </select>
     <hr />
 
     <div id="acDetails">
-      <!-- Alpin Model Details - Default view -->
-      <div class="row" id="alpinDetails">
+      <!-- AC Model Details -->
+      <div class="row" id="modelDetails">
         <div class="col-md-6">
-          <img src="../../Images/AC/hitachi.jpeg" alt="Alpin ASW-25KTN" class="img-fluid rounded shadow-sm" />
+          <img id="acImage" src="../../Images/AC/mitsubishi.jpeg" alt="Mitsubishi Model" class="img-fluid rounded shadow-sm" />
         </div>
 
         <div class="col-md-6">
           <h4 class="text-start" style="color: #2A186B; text-align: left;">Описание на продукта</h4>
-          <p class="text-start">
-            Моделът hit на hitachi предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
+          <p class="text-start" id="acDescription">
+            Моделът Premium SRK25ZS-W на Mitsubishi предлага японско качество и надеждност с изключителен комфорт и енергийна ефективност за вашия дом или офис.
           </p>
 
           <h5 class="mt-4 text-start" style="color: #2A186B; text-align: left;">Основни характеристики:</h5>
-          <ul class="text-start" style="text-align: left;">
+          <ul class="text-start" id="acCharacteristics" style="text-align: left;">
             <li>Капацитет охлаждане: 2.5 kW</li>
-            <li>Капацитет отопление: 2.8 kW</li>
-            <li>Енергиен клас: A++/A+</li>
-            <li>Работа при ниски температури до -25°C</li>
-            <li>Тих режим на работа</li>
-            <li>Wi-Fi управление (по избор)</li>
+            <li>Капацитет отопление: 3.1 kW</li>
+            <li>Енергиен клас: A+++/A+++</li>
+            <li>Работа при ниски температури до -20°C</li>
+            <li>Свръх тих режим на работа</li>
+            <li>Wi-Fi управление</li>
           </ul>
 
-          <h5 class="mt-4 text-start">Цена: <span style="color: green;">XXX лв</span></h5>
+          <h5 class="mt-4 text-start">Цена: <span id="acPrice" style="color: green;">XXX лв</span></h5>
 
           <a href="/contact" class="btn btn-primary mt-3">Задай въпрос</a>
         </div>
       </div>
     </div>
 
-    <!-- Optional Technical Table -->
+    <!-- Technical Table -->
     <div class="mt-5">
       <h4 class="text-start" style="color: #2A186B; text-align: left;">Технически характеристики</h4>
-      <table class="table table-bordered mt-3">
+      <table class="table table-bordered mt-3" id="technicalTable">
         <tbody>
           <tr>
             <th scope="row">Охлаждаща мощност</th>
-            <td>2.5 kW</td>
+            <td id="coolingPower">2.5 kW</td>
           </tr>
           <tr>
             <th scope="row">Отоплителна мощност</th>
-            <td>2.8 kW</td>
+            <td id="heatingPower">3.1 kW</td>
           </tr>
           <tr>
             <th scope="row">Ниво на шум (вътрешно тяло)</th>
-            <td>21-38 dB</td>
+            <td id="noiseLevel">19-38 dB</td>
           </tr>
           <tr>
             <th scope="row">Работна температура</th>
-            <td>от -25°C до +50°C</td>
+            <td id="operatingTemp">от -20°C до +46°C</td>
           </tr>
           <tr>
             <th scope="row">Размери (вътрешно тяло)</th>
-            <td>790 x 275 x 200 mm</td>
+            <td id="dimensions">798 x 295 x 229 mm</td>
           </tr>
           <tr>
             <th scope="row">Гаранция</th>
-            <td>36 месеца</td>
+            <td id="warranty">36 месеца</td>
           </tr>
         </tbody>
       </table>
@@ -132,143 +132,324 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Data for different models
     const acData = {
-      fj9: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      // Premium Series
+      premium25: {
+        description: "Моделът Premium SRK25ZS-W на Mitsubishi предлага японско качество и надеждност с изключителен комфорт и енергийна ефективност за вашия дом или офис.",
         characteristics: [
           "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет отопление: 3.1 kW",
+          "Енергиен клас: A+++/A+++",
+          "Работа при ниски температури до -20°C",
+          "Свръх тих режим на работа",
+          "Wi-Fi управление"
         ],
         price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        image: "../../Images/AC/mitsubishi.jpeg",
+        technicalSpecs: {
+          coolingPower: "2.5 kW",
+          heatingPower: "3.1 kW",
+          noiseLevelIndoor: "19-38 dB",
+          operatingTemp: "от -20°C до +46°C",
+          dimensionsIndoor: "798 x 295 x 229 mm",
+          warranty: "36 месеца"
+        }
       },
-      fj12: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      premium35: {
+        description: "Моделът Premium SRK35ZS-W на Mitsubishi съчетава японски инженеринг и изключителна ефективност за средни по големина помещения.",
+        characteristics: [
+          "Капацитет охлаждане: 3.5 kW",
+          "Капацитет отопление: 4.3 kW",
+          "Енергиен клас: A+++/A+++",
+          "Работа при ниски температури до -20°C",
+          "Свръх тих режим на работа",
+          "Wi-Fi управление"
+        ],
+        price: "XXX лв",
+        image: "../../Images/AC/mitsubishi.jpeg",
+        technicalSpecs: {
+          coolingPower: "3.5 kW",
+          heatingPower: "4.3 kW",
+          noiseLevelIndoor: "20-39 dB",
+          operatingTemp: "от -20°C до +46°C",
+          dimensionsIndoor: "798 x 295 x 229 mm",
+          warranty: "36 месеца"
+        }
+      },
+      premium50: {
+        description: "Моделът Premium SRK50ZS-W на Mitsubishi предлага висока мощност при запазване на енергийната ефективност и тих режим на работа.",
+        characteristics: [
+          "Капацитет охлаждане: 5.0 kW",
+          "Капацитет отопление: 5.8 kW",
+          "Енергиен клас: A++/A++",
+          "Работа при ниски температури до -20°C",
+          "Свръх тих режим на работа",
+          "Wi-Fi управление"
+        ],
+        price: "XXX лв",
+        image: "../../Images/AC/mitsubishi.jpeg",
+        technicalSpecs: {
+          coolingPower: "5.0 kW",
+          heatingPower: "5.8 kW",
+          noiseLevelIndoor: "25-43 dB",
+          operatingTemp: "от -20°C до +46°C",
+          dimensionsIndoor: "858 x 315 x 240 mm",
+          warranty: "36 месеца"
+        }
+      },
+      
+      // Smart Plus Series
+      smart25: {
+        description: "Моделът Smart Plus SRK25ZTL-W на Mitsubishi предлага интелигентни функции на достъпна цена, идеален за малки и средни помещения.",
         characteristics: [
           "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет отопление: 2.9 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Работа при ниски температури до -15°C",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Wi-Fi управление (опция)"
         ],
         price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        image: "../../Images/AC/mitsubishi_smart.jpeg",
+        technicalSpecs: {
+          coolingPower: "2.5 kW",
+          heatingPower: "2.9 kW",
+          noiseLevelIndoor: "21-40 dB",
+          operatingTemp: "от -15°C до +46°C",
+          dimensionsIndoor: "780 x 280 x 220 mm",
+          warranty: "36 месеца"
+        }
       },
-      fj18: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      smart35: {
+        description: "Моделът Smart Plus SRK35ZTL-W на Mitsubishi е оптимално решение за средни помещения, комбинирайки ефективност и достъпна цена.",
+        characteristics: [
+          "Капацитет охлаждане: 3.5 kW",
+          "Капацитет отопление: 4.0 kW",
+          "Енергиен клас: A++/A+",
+          "Работа при ниски температури до -15°C",
+          "Тих режим на работа",
+          "Wi-Fi управление (опция)"
+        ],
+        price: "XXX лв",
+        image: "../../Images/AC/mitsubishi_smart.jpeg",
+        technicalSpecs: {
+          coolingPower: "3.5 kW",
+          heatingPower: "4.0 kW",
+          noiseLevelIndoor: "22-42 dB",
+          operatingTemp: "от -15°C до +46°C",
+          dimensionsIndoor: "780 x 280 x 220 mm",
+          warranty: "36 месеца"
+        }
+      },
+      smart50: {
+        description: "Моделът Smart Plus SRK50ZTL-W на Mitsubishi предлага висока мощност и ефективност за по-големи пространства при оптимална цена.",
+        characteristics: [
+          "Капацитет охлаждане: 5.0 kW",
+          "Капацитет отопление: 5.4 kW",
+          "Енергиен клас: A++/A+",
+          "Работа при ниски температури до -15°C",
+          "Тих режим на работа",
+          "Wi-Fi управление (опция)"
+        ],
+        price: "XXX лв",
+        image: "../../Images/AC/mitsubishi_smart.jpeg",
+        technicalSpecs: {
+          coolingPower: "5.0 kW",
+          heatingPower: "5.4 kW",
+          noiseLevelIndoor: "28-45 dB",
+          operatingTemp: "от -15°C до +46°C",
+          dimensionsIndoor: "820 x 300 x 230 mm",
+          warranty: "36 месеца"
+        }
+      },
+      
+      // Diamond Series - Premium
+      diamond25: {
+        description: "Моделът Diamond SRK25ZSX-W на Mitsubishi е най-високия клас климатик, предлагащ максимален комфорт и иновативна технология за пречистване на въздуха.",
         characteristics: [
           "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет отопление: 3.2 kW",
+          "Енергиен клас: A+++/A+++",
+          "Работа при екстремно ниски температури до -25°C",
+          "Ултра тих режим на работа",
+          "Вграден плазмен филтър",
+          "Wi-Fi управление"
         ],
         price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        image: "../../Images/AC/mitsubishi_diamond.jpeg",
+        technicalSpecs: {
+          coolingPower: "2.5 kW",
+          heatingPower: "3.2 kW",
+          noiseLevelIndoor: "17-36 dB",
+          operatingTemp: "от -25°C до +46°C",
+          dimensionsIndoor: "820 x 305 x 230 mm",
+          warranty: "60 месеца"
+        }
       },
-      fj24: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      diamond35: {
+        description: "Моделът Diamond SRK35ZSX-W на Mitsubishi е върховият модел за средни помещения с уникална система за пречистване и максимален комфорт.",
+        characteristics: [
+          "Капацитет охлаждане: 3.5 kW",
+          "Капацитет отопление: 4.5 kW",
+          "Енергиен клас: A+++/A+++",
+          "Работа при екстремно ниски температури до -25°C",
+          "Ултра тих режим на работа",
+          "Вграден плазмен филтър",
+          "Wi-Fi управление"
+        ],
+        price: "XXX лв",
+        image: "../../Images/AC/mitsubishi_diamond.jpeg",
+        technicalSpecs: {
+          coolingPower: "3.5 kW",
+          heatingPower: "4.5 kW",
+          noiseLevelIndoor: "18-38 dB",
+          operatingTemp: "от -25°C до +46°C",
+          dimensionsIndoor: "820 x 305 x 230 mm",
+          warranty: "60 месеца"
+        }
+      },
+      diamond50: {
+        description: "Моделът Diamond SRK50ZSX-W на Mitsubishi е най-мощният в луксозната серия, съчетаващ висока производителност и революционна технология за пречистване на въздуха.",
+        characteristics: [
+          "Капацитет охлаждане: 5.0 kW",
+          "Капацитет отопление: 6.0 kW",
+          "Енергиен клас: A+++/A++",
+          "Работа при екстремно ниски температури до -25°C",
+          "Ултра тих режим на работа",
+          "Вграден плазмен филтър",
+          "Wi-Fi управление"
+        ],
+        price: "XXX лв",
+        image: "../../Images/AC/mitsubishi_diamond.jpeg",
+        technicalSpecs: {
+          coolingPower: "5.0 kW",
+          heatingPower: "6.0 kW",
+          noiseLevelIndoor: "22-42 dB",
+          operatingTemp: "от -25°C до +46°C",
+          dimensionsIndoor: "880 x 325 x 240 mm",
+          warranty: "60 месеца"
+        }
+      },
+      
+      // Floor Models
+      floor25: {
+        description: "Подовият модел SRF25ZS-W на Mitsubishi предлага уникално разпространение на въздуха отдолу нагоре, идеален за специфични помещения.",
         characteristics: [
           "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет отопление: 3.0 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Работа при ниски температури до -15°C",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Wi-Fi управление (опция)"
         ],
         price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        image: "../../Images/AC/mitsubishi_floor.jpeg",
+        technicalSpecs: {
+          coolingPower: "2.5 kW",
+          heatingPower: "3.0 kW",
+          noiseLevelIndoor: "22-39 dB",
+          operatingTemp: "от -15°C до +46°C",
+          dimensionsIndoor: "600 x 750 x 215 mm",
+          warranty: "36 месеца"
+        }
       },
-      fj9p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      floor35: {
+        description: "Подовият модел SRF35ZS-W на Mitsubishi съчетава по-голяма мощност с компактен дизайн, идеален за помещения, където стенните модели не са подходящи.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане: 3.5 kW",
+          "Капацитет отопление: 4.2 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Работа при ниски температури до -15°C",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Wi-Fi управление (опция)"
         ],
         price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        image: "../../Images/AC/mitsubishi_floor.jpeg",
+        technicalSpecs: {
+          coolingPower: "3.5 kW",
+          heatingPower: "4.2 kW",
+          noiseLevelIndoor: "24-42 dB",
+          operatingTemp: "от -15°C до +46°C",
+          dimensionsIndoor: "600 x 750 x 215 mm",
+          warranty: "36 месеца"
+        }
       },
-      fj12p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      floor50: {
+        description: "Подовият модел SRF50ZSX-W на Mitsubishi е мощен подов климатик от премиум класа, съчетаващ високи характеристики с уникално разпределение на въздуха.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане: 5.0 kW",
+          "Капацитет отопление: 5.8 kW",
           "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Работа при ниски температури до -20°C",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Вграден плазмен филтър",
+          "Wi-Fi управление"
         ],
         price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
-      },
-      fj14p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
-        characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
-        ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
-      },
-      fj16p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
-        characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
-        ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
-      },
+        image: "../../Images/AC/mitsubishi_floor.jpeg",
+        technicalSpecs: {
+          coolingPower: "5.0 kW",
+          heatingPower: "5.8 kW",
+          noiseLevelIndoor: "27-46 dB",
+          operatingTemp: "от -20°C до +46°C",
+          dimensionsIndoor: "620 x 780 x 220 mm",
+          warranty: "60 месеца"
+        }
+      }
     };
 
-    // Function to update the product details based on the selected model
-    function updateProductDetails() {
-      const selectedModel = document.getElementById('acModelSelect').value;
-      const ac = acData[selectedModel];
-
-      // Update image
-      document.querySelector("#acDetails .row img").src = ac.image;
+    // Function to update the AC details based on selected model
+    function updateACDetails(modelId) {
+      const modelData = acData[modelId];
+      if (!modelData) return;
 
       // Update description
-      document.querySelector("#acDetails .row p").textContent = ac.description;
+      document.getElementById('acDescription').textContent = modelData.description;
 
-      // Update characteristics list
-      const characteristicsList = document.querySelector("#acDetails .row ul");
+      // Update image
+      document.getElementById('acImage').src = modelData.image;
+      document.getElementById('acImage').alt = modelId;
+
+      // Update characteristics
+      const characteristicsList = document.getElementById('acCharacteristics');
       characteristicsList.innerHTML = '';
-      ac.characteristics.forEach(item => {
+      modelData.characteristics.forEach(item => {
         const li = document.createElement('li');
         li.textContent = item;
         characteristicsList.appendChild(li);
       });
 
       // Update price
-      document.querySelector("#acDetails .row .mt-4 span").textContent = ac.price;
+      document.getElementById('acPrice').textContent = modelData.price;
+
+      // Update technical specifications table
+      document.getElementById('coolingPower').textContent = modelData.technicalSpecs.coolingPower;
+      document.getElementById('heatingPower').textContent = modelData.technicalSpecs.heatingPower;
+      document.getElementById('noiseLevel').textContent = modelData.technicalSpecs.noiseLevelIndoor;
+      document.getElementById('operatingTemp').textContent = modelData.technicalSpecs.operatingTemp;
+      document.getElementById('dimensions').textContent = modelData.technicalSpecs.dimensionsIndoor;
+      document.getElementById('warranty').textContent = modelData.technicalSpecs.warranty;
     }
 
-    // Event listener for dropdown change
-    document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);
+    // Add event listener for model selection
+    document.getElementById('acModelSelect').addEventListener('change', function() {
+      const selectedModel = this.value;
+      updateACDetails(selectedModel);
+    });
 
-    // Initial call to populate the details
-    updateProductDetails();
+    // Initialize with the default selected model
+    document.addEventListener('DOMContentLoaded', function() {
+      const defaultModel = document.getElementById('acModelSelect').value;
+      updateACDetails(defaultModel);
+    });
+
+    // Scroll to top function
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   </script>
 </body>
 

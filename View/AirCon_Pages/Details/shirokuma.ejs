@@ -49,20 +49,20 @@
     <hr />
 
     <div id="acDetails">
-      <!-- Alpin Model Details - Default view -->
-      <div class="row" id="alpinDetails">
+      <!-- AC Model Details -->
+      <div class="row" id="modelDetails">
         <div class="col-md-6">
-          <img src="../../Images/AC/hitachi.jpeg" alt="Alpin ASW-25KTN" class="img-fluid rounded shadow-sm" />
+          <img id="acImage" src="../../Images/AC/hitachi.jpeg" alt="Hitachi Model" class="img-fluid rounded shadow-sm" />
         </div>
 
         <div class="col-md-6">
           <h4 class="text-start" style="color: #2A186B; text-align: left;">Описание на продукта</h4>
-          <p class="text-start">
-            Моделът hit на hitachi предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
+          <p class="text-start" id="acDescription">
+            Моделът RAK25PSEW на Hitachi предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
           </p>
 
           <h5 class="mt-4 text-start" style="color: #2A186B; text-align: left;">Основни характеристики:</h5>
-          <ul class="text-start" style="text-align: left;">
+          <ul class="text-start" id="acCharacteristics" style="text-align: left;">
             <li>Капацитет охлаждане: 2.5 kW</li>
             <li>Капацитет отопление: 2.8 kW</li>
             <li>Енергиен клас: A++/A+</li>
@@ -71,41 +71,41 @@
             <li>Wi-Fi управление (по избор)</li>
           </ul>
 
-          <h5 class="mt-4 text-start">Цена: <span style="color: green;">XXX лв</span></h5>
+          <h5 class="mt-4 text-start">Цена: <span id="acPrice" style="color: green;">XXX лв</span></h5>
 
           <a href="/contact" class="btn btn-primary mt-3">Задай въпрос</a>
         </div>
       </div>
     </div>
 
-    <!-- Optional Technical Table -->
+    <!-- Technical Table -->
     <div class="mt-5">
       <h4 class="text-start" style="color: #2A186B; text-align: left;">Технически характеристики</h4>
-      <table class="table table-bordered mt-3">
+      <table class="table table-bordered mt-3" id="technicalTable">
         <tbody>
           <tr>
             <th scope="row">Охлаждаща мощност</th>
-            <td>2.5 kW</td>
+            <td id="coolingPower">2.5 kW</td>
           </tr>
           <tr>
             <th scope="row">Отоплителна мощност</th>
-            <td>2.8 kW</td>
+            <td id="heatingPower">2.8 kW</td>
           </tr>
           <tr>
             <th scope="row">Ниво на шум (вътрешно тяло)</th>
-            <td>21-38 dB</td>
+            <td id="noiseLevel">21-38 dB</td>
           </tr>
           <tr>
             <th scope="row">Работна температура</th>
-            <td>от -25°C до +50°C</td>
+            <td id="operatingTemp">от -25°C до +50°C</td>
           </tr>
           <tr>
             <th scope="row">Размери (вътрешно тяло)</th>
-            <td>790 x 275 x 200 mm</td>
+            <td id="dimensions">790 x 275 x 200 mm</td>
           </tr>
           <tr>
             <th scope="row">Гаранция</th>
-            <td>36 месеца</td>
+            <td id="warranty">36 месеца</td>
           </tr>
         </tbody>
       </table>
@@ -123,10 +123,10 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Data for different models
     const acData = {
+      // RAK25PSEW - Hitachi
       hit25: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        description: "Моделът RAK25PSEW на Hitachi предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
         characteristics: [
           "Капацитет охлаждане: 2.5 kW",
           "Капацитет отопление: 2.8 kW",
@@ -136,91 +136,114 @@
           "Wi-Fi управление (по избор)"
         ],
         price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        image: "../../Images/AC/hitachi.jpeg",
+        technicalSpecs: {
+          coolingPower: "2.5 kW",
+          heatingPower: "2.8 kW",
+          noiseLevelIndoor: "21-38 dB",
+          operatingTemp: "от -25°C до +50°C",
+          dimensionsIndoor: "790 x 275 x 200 mm",
+          warranty: "36 месеца"
+        }
       },
+      // RAK35PSEW - Hitachi
       hit35: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        description: "Моделът RAK35PSEW на Hitachi е подходящ за средни по размер помещения, предлагащ оптимален комфорт и енергийна ефективност.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане: 3.5 kW",
+          "Капацитет отопление: 3.8 kW",
           "Енергиен клас: A++/A+",
           "Работа при ниски температури до -25°C",
           "Тих режим на работа",
           "Wi-Fi управление (по избор)"
         ],
         price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        image: "../../Images/AC/hitachi.jpeg",
+        technicalSpecs: {
+          coolingPower: "3.5 kW",
+          heatingPower: "3.8 kW",
+          noiseLevelIndoor: "22-40 dB",
+          operatingTemp: "от -25°C до +50°C",
+          dimensionsIndoor: "815 x 290 x 210 mm",
+          warranty: "36 месеца"
+        }
       },
+      // RAK50PSEW - Hitachi
       hit50: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+        description: "Моделът RAK50PSEW на Hitachi е мощен и ефективен, проектиран за по-големи пространства като офиси или просторни жилищни помещения.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
+          "Капацитет охлаждане: 5.0 kW",
+          "Капацитет отопление: 5.5 kW",
           "Енергиен клас: A++/A+",
           "Работа при ниски температури до -25°C",
           "Тих режим на работа",
           "Wi-Fi управление (по избор)"
         ],
         price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
-      },
-      hit60: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
-        characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
-        ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
-      },
-      hit70: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
-        characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
-        ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
-      },
+        image: "../../Images/AC/hitachi.jpeg",
+        technicalSpecs: {
+          coolingPower: "5.0 kW",
+          heatingPower: "5.5 kW",
+          noiseLevelIndoor: "25-45 dB",
+          operatingTemp: "от -25°C до +50°C",
+          dimensionsIndoor: "850 x 310 x 230 mm",
+          warranty: "36 месеца"
+        }
+      }
     };
 
-    // Function to update the product details based on the selected model
-    function updateProductDetails() {
-      const selectedModel = document.getElementById('acModelSelect').value;
-      const ac = acData[selectedModel];
-
-      // Update image
-      document.querySelector("#acDetails .row img").src = ac.image;
+    // Function to update the AC details based on selected model
+    function updateACDetails(modelId) {
+      const modelData = acData[modelId];
+      if (!modelData) return;
 
       // Update description
-      document.querySelector("#acDetails .row p").textContent = ac.description;
+      document.getElementById('acDescription').textContent = modelData.description;
 
-      // Update characteristics list
-      const characteristicsList = document.querySelector("#acDetails .row ul");
+      // Update image
+      document.getElementById('acImage').src = modelData.image;
+      document.getElementById('acImage').alt = modelId;
+
+      // Update characteristics
+      const characteristicsList = document.getElementById('acCharacteristics');
       characteristicsList.innerHTML = '';
-      ac.characteristics.forEach(item => {
+      modelData.characteristics.forEach(item => {
         const li = document.createElement('li');
         li.textContent = item;
         characteristicsList.appendChild(li);
       });
 
       // Update price
-      document.querySelector("#acDetails .row .mt-4 span").textContent = ac.price;
+      document.getElementById('acPrice').textContent = modelData.price;
+
+      // Update technical specifications table
+      document.getElementById('coolingPower').textContent = modelData.technicalSpecs.coolingPower;
+      document.getElementById('heatingPower').textContent = modelData.technicalSpecs.heatingPower;
+      document.getElementById('noiseLevel').textContent = modelData.technicalSpecs.noiseLevelIndoor;
+      document.getElementById('operatingTemp').textContent = modelData.technicalSpecs.operatingTemp;
+      document.getElementById('dimensions').textContent = modelData.technicalSpecs.dimensionsIndoor;
+      document.getElementById('warranty').textContent = modelData.technicalSpecs.warranty;
     }
 
-    // Event listener for dropdown change
-    document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);
+    // Add event listener for model selection
+    document.getElementById('acModelSelect').addEventListener('change', function() {
+      const selectedModel = this.value;
+      updateACDetails(selectedModel);
+    });
 
-    // Initial call to populate the details
-    updateProductDetails();
+    // Initialize with the default selected model
+    document.addEventListener('DOMContentLoaded', function() {
+      const defaultModel = document.getElementById('acModelSelect').value;
+      updateACDetails(defaultModel);
+    });
+
+    // Scroll to top function
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   </script>
 </body>
 

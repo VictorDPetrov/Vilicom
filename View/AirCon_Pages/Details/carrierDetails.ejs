@@ -42,14 +42,14 @@
   <div class="container content-wrap page-containe">
     <h1 class="mt-4" style="color: #2A186B; text-align: left;">Изберете модел климатик</h1>
     <select id="acModelSelect" class="form-select">
-        <option value="fj9">42QHG009D8SE - Extreme 2</option>
-        <option value="fj12">42QHG012D8SE - Extreme 2</option>
-        <option value="fj18">42QHG018D8SE - Extreme 2</option>
-        <option value="fj24">42QHG024D8SE - Extreme 2</option>
-        <option value="fj9p">42QHE09D8SH - CoolEasy</option>
-        <option value="fj12p">42QHE12D8SH - CoolEasy</option>
-        <option value="fj18p">42QHE18D8SH - CoolEasy</option>
-        <option value="fj24p">42QHE24D8SH - CoolEasy</option>
+      <option value="fj9">42QHG009D8SE - Extreme 2</option>
+      <option value="fj12">42QHG012D8SE - Extreme 2</option>
+      <option value="fj18">42QHG018D8SE - Extreme 2</option>
+      <option value="fj24">42QHG024D8SE - Extreme 2</option>
+      <option value="fj9p">42QHE09D8SH - CoolEasy</option>
+      <option value="fj12p">42QHE12D8SH - CoolEasy</option>
+      <option value="fj18p">42QHE18D8SH - CoolEasy</option>
+      <option value="fj24p">42QHE24D8SH - CoolEasy</option>
     </select>
     <hr />
 
@@ -63,7 +63,8 @@
         <div class="col-md-6">
           <h4 class="text-start" style="color: #2A186B; text-align: left;">Описание на продукта</h4>
           <p class="text-start">
-            Моделът hit на hitachi предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
+            Моделът hit на hitachi предлага ефективно отопление и охлаждане дори при екстремни климатични условия.
+            Подходящ е както за домашна, така и за офис употреба.
           </p>
 
           <h5 class="mt-4 text-start" style="color: #2A186B; text-align: left;">Основни характеристики:</h5>
@@ -86,7 +87,7 @@
     <!-- Optional Technical Table -->
     <div class="mt-5">
       <h4 class="text-start" style="color: #2A186B; text-align: left;">Технически характеристики</h4>
-      <table class="table table-bordered mt-3">
+      <table class="table table-bordered mt-3" id="technicalTable">
         <tbody>
           <tr>
             <th scope="row">Охлаждаща мощност</th>
@@ -129,136 +130,269 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Data for different models
+    // Data for different models
     const acData = {
-      fj9: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      fj9: { // 42QHG009D8SE - Extreme 2
+        description: "Инверторен климатик Carrier 42QHG009D8SE от серията Extreme 2, проектиран за екстремни зимни условия до -25°C. Осигурява висока ефективност и комфорт за малки помещения.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане: 2.7 kW",
+          "Капацитет отопление: 2.9 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа в режим отопление: до -25°C",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi модул: Да",
+          "Филтър с активен въглен",
+          "Функция 'Тих режим'"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/carrier_extreme2_9k.jpg", // ЗАДЪЛЖИТЕЛНО: Актуализирайте пътя до снимката
+        technicalSpecs: {
+          coolingPower: "2.70 kW",
+          heatingPower: "2.90 kW",
+          noiseLevelIndoor: "21-39 dBA (Проверете!)",
+          operatingTemp: "Охлаждане: -15°C до +46°C / Отопление: -25°C до +24°C",
+          dimensionsIndoor: "812 x 192 x 300 mm (Проверете!)",
+          warranty: "60 месеца (Проверете!)"
+        }
       },
-      fj12: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      fj12: { // 42QHG012D8SE - Extreme 2
+        description: "Carrier 42QHG012D8SE Extreme 2 е мощен и надежден инверторен климатик, идеален за средно големи стаи. Гарантира ефективна работа при температури до -25°C.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане: 3.5 kW",
+          "Капацитет отопление: 3.8 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа в режим отопление: до -25°C",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi модул: Да",
+          "Йонизатор",
+          "Функция 'Follow Me'"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/carrier_extreme2_12k.jpg", // ЗАДЪЛЖИТЕЛНО: Актуализирайте пътя до снимката
+        technicalSpecs: {
+          coolingPower: "3.50 kW",
+          heatingPower: "3.80 kW",
+          noiseLevelIndoor: "22-41 dBA (Проверете!)",
+          operatingTemp: "Охлаждане: -15°C до +46°C / Отопление: -25°C до +24°C",
+          dimensionsIndoor: "812 x 192 x 300 mm (Проверете!)", // Размерите може да са същите за 9/12к
+          warranty: "60 месеца (Проверете!)"
+        }
       },
-      fj18: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      fj18: { // 42QHG018D8SE - Extreme 2
+        description: "Инверторният климатик Carrier 42QHG018D8SE Extreme 2 предлага висок капацитет и производителност за по-големи помещения, с гарантирана работа при екстремно ниски температури до -25°C.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане: 5.3 kW",
+          "Капацитет отопление: 5.6 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа в режим отопление: до -25°C",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi модул: Да",
+          "Самопочистваща функция",
+          "Интелигентно обезскрежаване"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/carrier_extreme2_18k.jpg", // ЗАДЪЛЖИТЕЛНО: Актуализирайте пътя до снимката
+        technicalSpecs: {
+          coolingPower: "5.30 kW",
+          heatingPower: "5.60 kW",
+          noiseLevelIndoor: "25-45 dBA (Проверете!)",
+          operatingTemp: "Охлаждане: -15°C до +46°C / Отопление: -25°C до +24°C",
+          dimensionsIndoor: "957 x 213 x 302 mm (Проверете!)",
+          warranty: "60 месеца (Проверете!)"
+        }
       },
-      fj24: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      fj24: { // 42QHG024D8SE - Extreme 2
+        description: "Максимална мощност и ефективност с Carrier 42QHG024D8SE Extreme 2. Подходящ за големи пространства, този модел осигурява комфорт дори при -25°C.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане: 6.8 kW",
+          "Капацитет отопление: 7.2 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+", // По-големите може да са A+/A
+          "Работа в режим отопление: до -25°C",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi модул: Да",
+          "Turbo режим",
+          "Sleep режим"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/carrier_extreme2_24k.jpg", // ЗАДЪЛЖИТЕЛНО: Актуализирайте пътя до снимката
+        technicalSpecs: {
+          coolingPower: "6.80 kW",
+          heatingPower: "7.20 kW",
+          noiseLevelIndoor: "28-48 dBA (Проверете!)",
+          operatingTemp: "Охлаждане: -15°C до +46°C / Отопление: -25°C до +24°C",
+          dimensionsIndoor: "1040 x 220 x 327 mm (Проверете!)",
+          warranty: "60 месеца (Проверете!)"
+        }
       },
-      fj9p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      fj9p: { // 42QHE09D8SH - CoolEasy
+        description: "Инверторен климатик Carrier 42QHE09D8SH от серията CoolEasy. Ефективно и икономично решение за охлаждане и отопление на малки помещения.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
+          "Капацитет охлаждане: 2.6 kW",
           "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа в режим отопление: до -15°C", // CoolEasy може да има по-висока долна граница
+          "Хладилен агент: R32",
+          "Wi-Fi модул: Опционален (Проверете!)",
+          "Автоматичен рестарт",
+          "24-часов таймер"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/carrier_cooleasy_9k.jpg", // ЗАДЪЛЖИТЕЛНО: Актуализирайте пътя до снимката
+        technicalSpecs: {
+          coolingPower: "2.60 kW",
+          heatingPower: "2.80 kW",
+          noiseLevelIndoor: "20-37 dBA (Проверете!)",
+          operatingTemp: "Охлаждане: -15°C до +46°C / Отопление: -15°C до +24°C",
+          dimensionsIndoor: "722 x 187 x 290 mm (Проверете!)",
+          warranty: "36 месеца (Проверете!)" // Може да е с по-къса гаранция
+        }
       },
-      fj12p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      fj12p: { // 42QHE12D8SH - CoolEasy
+        description: "Carrier 42QHE12D8SH CoolEasy предлага баланс между цена и качество. Надеждно охлаждане и отопление за средно големи стаи, с инверторна технология за икономия на енергия.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане: 3.4 kW",
+          "Капацитет отопление: 3.6 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа в режим отопление: до -15°C",
+          "Хладилен агент: R32",
+          "Wi-Fi модул: Опционален (Проверете!)",
+          "Режим 'Eco'",
+          "Компактен дизайн"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/carrier_cooleasy_12k.jpg", // ЗАДЪЛЖИТЕЛНО: Актуализирайте пътя до снимката
+        technicalSpecs: {
+          coolingPower: "3.40 kW",
+          heatingPower: "3.60 kW",
+          noiseLevelIndoor: "21-39 dBA (Проверете!)",
+          operatingTemp: "Охлаждане: -15°C до +46°C / Отопление: -15°C до +24°C",
+          dimensionsIndoor: "722 x 187 x 290 mm (Проверете!)",
+          warranty: "36 месеца (Проверете!)"
+        }
       },
-      fj18p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      fj18p: { // 42QHE18D8SH - CoolEasy
+        description: "За по-големи помещения, Carrier 42QHE18D8SH CoolEasy осигурява ефективна климатизация с инверторна технология. Подходящ за отопление при умерени зимни условия.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане: 5.0 kW",
+          "Капацитет отопление: 5.2 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа в режим отопление: до -15°C",
+          "Хладилен агент: R32",
+          "Wi-Fi модул: Опционален (Проверете!)",
+          "Функция за изсушаване",
+          "Лесен за почистване панел"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/carrier_cooleasy_18k.jpg", // ЗАДЪЛЖИТЕЛНО: Актуализирайте пътя до снимката
+        technicalSpecs: {
+          coolingPower: "5.00 kW",
+          heatingPower: "5.20 kW",
+          noiseLevelIndoor: "24-43 dBA (Проверете!)",
+          operatingTemp: "Охлаждане: -15°C до +46°C / Отопление: -15°C до +24°C",
+          dimensionsIndoor: "910 x 205 x 292 mm (Проверете!)",
+          warranty: "36 месеца (Проверете!)"
+        }
       },
-      fj24p: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      fj24p: { // 42QHE24D8SH - CoolEasy
+        description: "Carrier 42QHE24D8SH CoolEasy е икономичен избор за климатизация на големи пространства, предлагащ инверторна ефективност и основни функции за комфорт.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане: 6.5 kW",
+          "Капацитет отопление: 6.8 kW",
+          "Енергиен клас (охлаждане/отопление): A+/A", // По-големите може да са с по-нисък клас
+          "Работа в режим отопление: до -15°C",
+          "Хладилен агент: R32",
+          "Wi-Fi модул: Опционален (Проверете!)",
+          "Турбо режим за бързо достигане на температурата",
+          "Индикация за грешки"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/hitachi.jpeg"
-      },
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/carrier_cooleasy_24k.jpg", // ЗАДЪЛЖИТЕЛНО: Актуализирайте пътя до снимката
+        technicalSpecs: {
+          coolingPower: "6.50 kW",
+          heatingPower: "6.80 kW",
+          noiseLevelIndoor: "27-46 dBA (Проверете!)",
+          operatingTemp: "Охлаждане: -15°C до +46°C / Отопление: -15°C до +24°C",
+          dimensionsIndoor: "1010 x 220 x 315 mm (Проверете!)",
+          warranty: "36 месеца (Проверете!)"
+        }
+      }
     };
 
-    // Function to update the product details based on the selected model
     function updateProductDetails() {
-      const selectedModel = document.getElementById('acModelSelect').value;
-      const ac = acData[selectedModel];
+      const selectedModelValue = document.getElementById('acModelSelect').value;
+      const ac = acData[selectedModelValue];
 
-      // Update image
-      document.querySelector("#acDetails .row img").src = ac.image;
+      if (!ac) {
+        console.error("Данни за модела не са намерени:", selectedModelValue);
+        return; // Спира изпълнението, ако моделът не е намерен
+      }
+
+      // Update image and add alt text
+      const productImage = document.querySelector("#acDetails .row img");
+      if (productImage) {
+        productImage.src = ac.image;
+        // Вземане на текста на избраната опция за по-добър alt текст
+        const selectedOptionText = document.getElementById('acModelSelect').options[document.getElementById('acModelSelect').selectedIndex].text;
+        productImage.alt = "Климатик " + selectedOptionText;
+      }
 
       // Update description
-      document.querySelector("#acDetails .row p").textContent = ac.description;
+      const productDescription = document.querySelector("#acDetails .row p");
+      if (productDescription) {
+        productDescription.textContent = ac.description;
+      }
 
       // Update characteristics list
       const characteristicsList = document.querySelector("#acDetails .row ul");
-      characteristicsList.innerHTML = '';
-      ac.characteristics.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        characteristicsList.appendChild(li);
-      });
+      if (characteristicsList) {
+        characteristicsList.innerHTML = ''; // Clear existing items
+        if (ac.characteristics && Array.isArray(ac.characteristics)) {
+          ac.characteristics.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            characteristicsList.appendChild(li);
+          });
+        }
+      }
 
       // Update price
-      document.querySelector("#acDetails .row .mt-4 span").textContent = ac.price;
+      const productPrice = document.querySelector("#acDetails .row .mt-4 span");
+      if (productPrice) {
+        productPrice.textContent = ac.price;
+      }
+
+      // Update technical table
+      if (ac.technicalSpecs) {
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td"); // Get all <td> elements in tbody
+          if (cells.length >= 6) { // Уверете се, че има достатъчно клетки
+            cells[0].textContent = ac.technicalSpecs.coolingPower || 'N/A';
+            cells[1].textContent = ac.technicalSpecs.heatingPower || 'N/A';
+            cells[2].textContent = ac.technicalSpecs.noiseLevelIndoor || 'N/A';
+            cells[3].textContent = ac.technicalSpecs.operatingTemp || 'N/A';
+            cells[4].textContent = ac.technicalSpecs.dimensionsIndoor || 'N/A';
+            cells[5].textContent = ac.technicalSpecs.warranty || 'N/A';
+          }
+        }
+      } else {
+        // Ако няма technicalSpecs, може да изчистите таблицата или да покажете 'N/A'
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          cells.forEach(cell => cell.textContent = 'N/A');
+        }
+      }
     }
+
+    // Event listener for dropdown change
+    document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);
+
+    // Initial call to populate the details for the default selected model when the page loads
+    // Ensure the DOM is fully loaded, especially if the script is in the <head>
+    document.addEventListener('DOMContentLoaded', function () {
+      updateProductDetails();
+    });
 
     // Event listener for dropdown change
     document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);

@@ -60,7 +60,8 @@
         <div class="col-md-6">
           <h4 class="text-start" style="color: #2A186B; text-align: left;">Описание на продукта</h4>
           <p class="text-start">
-            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
+            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични
+            условия. Подходящ е както за домашна, така и за офис употреба.
           </p>
 
           <h5 class="mt-4 text-start" style="color: #2A186B; text-align: left;">Основни характеристики:</h5>
@@ -83,7 +84,7 @@
     <!-- Optional Technical Table -->
     <div class="mt-5">
       <h4 class="text-start" style="color: #2A186B; text-align: left;">Технически характеристики</h4>
-      <table class="table table-bordered mt-3">
+      <table class="table table-bordered mt-3" id="technicalTable">
         <tbody>
           <tr>
             <th scope="row">Охлаждаща мощност</th>
@@ -127,96 +128,205 @@
   <script>
     // Data for different models
     const acData = {
-      comfora1: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      comfora1: { // FTXP25N (approx. 9000 BTU)
+        description: "Инверторен климатик Daikin Comfora FTXP25N, осигуряващ изключителна ефективност и комфорт. С елегантен дизайн и тиха работа, той е идеален за спални и малки помещения.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 2.5 kW",
+          "Капацитет отопление (Ном.): 3.0 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A++",
+          "Работа в режим отопление: до -15°C",
+          "Хладилен агент: R32",
+          "Wi-Fi управление: Опционално (с адаптер BRP069B4x - проверете!)",
+          "Изключително тиха работа: от 19 dBA",
+          "Титаниев апатитен дезодориращ филтър"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin.jpeg", // Актуализирайте с конкретна снимка, ако е налична
+        technicalSpecs: {
+          coolingPower: "2.50 kW (Мин:1.3/Ном:2.5/Макс:3.0)",
+          heatingPower: "3.00 kW (Мин:1.3/Ном:3.0/Макс:4.0)",
+          noiseLevelIndoor: "Охл: 19/25/40 dBA (Тих/Нисък/Висок)", // (Sleep/Low/High - verify exacts)
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +18°C",
+          dimensionsIndoor: "286 x 770 x 225 мм (ВxШxД)",
+          warranty: "36 месеца (Проверете!)"
+        }
       },
-      comfora2: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      comfora2: { // FTXP35N (approx. 12000 BTU)
+        description: "Daikin Comfora FTXP35N предлага перфектен баланс между производителност и комфорт за средно големи помещения. Надежден и икономичен, с множество интелигентни функции.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 3.5 kW",
+          "Капацитет отопление (Ном.): 4.0 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A++",
+          "Работа в режим отопление: до -15°C",
+          "Хладилен агент: R32",
+          "Wi-Fi управление: Опционално (с адаптер BRP069B4x - проверете!)",
+          "Многонишков въздушен поток за равномерно разпределение",
+          "Режим 'Powerful' за бързо достигане на температурата"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin.jpeg", // Актуализирайте с конкретна снимка, ако е налична
+        technicalSpecs: {
+          coolingPower: "3.50 kW (Мин:1.4/Ном:3.5/Макс:3.8)",
+          heatingPower: "4.00 kW (Мин:1.4/Ном:4.0/Макс:4.8)",
+          noiseLevelIndoor: "Охл: 20/27/43 dBA (Тих/Нисък/Висок)",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +18°C",
+          dimensionsIndoor: "286 x 770 x 225 мм (ВxШxД)", // Често 25 и 35 са с еднакви размери
+          warranty: "36 месеца (Проверете!)"
+        }
       },
-      comfora3: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      comfora3: { // FTXP50N (approx. 18000 BTU)
+        description: "Мощният Daikin Comfora FTXP50N е предназначен за по-големи пространства, като осигурява оптимален климат през цялата година. Висока ефективност дори при по-ниски температури.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 5.0 kW",
+          "Капацитет отопление (Ном.): 6.0 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A++",
+          "Работа в режим отопление: до -15°C",
+          "Хладилен агент: R32",
+          "Wi-Fi управление: Опционално (с адаптер BRP069B4x - проверете!)",
+          "Вертикално автоматично завъртане на жалузите",
+          "Седмичен таймер"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin.jpeg", // Актуализирайте с конкретна снимка, ако е налична
+        technicalSpecs: {
+          coolingPower: "5.00 kW (Мин:1.7/Ном:5.0/Макс:5.3)",
+          heatingPower: "6.00 kW (Мин:1.7/Ном:6.0/Макс:6.5)",
+          noiseLevelIndoor: "Охл: 27/34/45 dBA (Тих/Нисък/Висок)",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +18°C",
+          dimensionsIndoor: "295 x 990 x 263 мм (ВxШxД)", // По-големите модели са с по-големи тела
+          warranty: "36 месеца (Проверете!)"
+        }
       },
-      comfora4: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      comfora4: { // FTXP60N (approx. 21000-24000 BTU)
+        description: "Daikin Comfora FTXP60N е решение за климатизация на големи всекидневни или офиси, предлагайки висок капацитет и запазвайки характерните за Daikin тишина и ефективност.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 6.0 kW",
+          "Капацитет отопление (Ном.): 7.0 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+", // Понякога големите падат с клас при отопление
+          "Работа в режим отопление: до -15°C",
+          "Хладилен агент: R32",
+          "Wi-Fi управление: Опционално (с адаптер BRP069B4x - проверете!)",
+          "Икономичен режим (Econo)",
+          "Автоматичен рестарт след спиране на тока"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin.jpeg", // Актуализирайте с конкретна снимка, ако е налична
+        technicalSpecs: {
+          coolingPower: "6.00 kW (Мин:1.8/Ном:6.0/Макс:6.5)",
+          heatingPower: "7.00 kW (Мин:1.8/Ном:7.0/Макс:7.7)",
+          noiseLevelIndoor: "Охл: 28/35/46 dBA (Тих/Нисък/Висок)",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +18°C",
+          dimensionsIndoor: "295 x 990 x 263 мм (ВxШxД)", // Често 50 и 60 са с еднакви размери
+          warranty: "36 месеца (Проверете!)"
+        }
       },
-      comfora5: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      comfora5: { // FTXP71N (approx. 24000+ BTU)
+        description: "Максимален капацитет от серията Comfora, Daikin FTXP71N е предназначен за най-големите жилищни помещения, осигурявайки мощен и ефективен контрол на климата.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 7.1 kW",
+          "Капацитет отопление (Ном.): 8.2 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа в режим отопление: до -15°C",
+          "Хладилен агент: R32",
+          "Wi-Fi управление: Опционално (с адаптер BRP069B4x - проверете!)",
+          "Самодиагностика",
+          "Нощен режим"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
-      },
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin.jpeg", // Актуализирайте с конкретна снимка, ако е налична
+        technicalSpecs: {
+          coolingPower: "7.10 kW (Мин:2.3/Ном:7.1/Макс:7.3)",
+          heatingPower: "8.20 kW (Мин:2.3/Ном:8.2/Макс:9.0)",
+          noiseLevelIndoor: "Охл: 32/38/47 dBA (Тих/Нисък/Висок)",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -15°C до +18°C",
+          dimensionsIndoor: "295 x 990 x 263 мм (ВxШxД)", // Може да е същият като 50/60 или малко по-голям
+          warranty: "36 месеца (Проверете!)"
+        }
+      }
     };
 
-    // Function to update the product details based on the selected model
     function updateProductDetails() {
-      const selectedModel = document.getElementById('acModelSelect').value;
-      const ac = acData[selectedModel];
+      const selectedModelValue = document.getElementById('acModelSelect').value;
+      const ac = acData[selectedModelValue];
 
-      // Update image
-      document.querySelector("#acDetails .row img").src = ac.image;
+      if (!ac) {
+        console.error("Данни за модела не са намерени:", selectedModelValue);
+        // Почистване на полетата или показване на съобщение за грешка
+        const productImage = document.querySelector("#acDetails .row img");
+        if (productImage) productImage.style.display = 'none';
+        const productDescription = document.querySelector("#acDetails .row p");
+        if (productDescription) productDescription.textContent = 'Информацията за избрания модел не е налична.';
+        const characteristicsList = document.querySelector("#acDetails .row ul");
+        if (characteristicsList) characteristicsList.innerHTML = '';
+        const productPrice = document.querySelector("#acDetails .row .mt-4 span");
+        if (productPrice) productPrice.textContent = '-';
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          cells.forEach(cell => cell.textContent = 'N/A');
+        }
+        return;
+      }
 
-      // Update description
-      document.querySelector("#acDetails .row p").textContent = ac.description;
+      const productImageVisible = document.querySelector("#acDetails .row img");
+      if (productImageVisible) productImageVisible.style.display = 'block';
 
-      // Update characteristics list
+      const productImage = document.querySelector("#acDetails .row img");
+      if (productImage) {
+        productImage.src = ac.image;
+        const selectedOptionText = document.getElementById('acModelSelect').options[document.getElementById('acModelSelect').selectedIndex].text;
+        productImage.alt = "Климатик Daikin Comfora " + selectedOptionText; // По-конкретен alt текст
+      }
+
+      const productDescription = document.querySelector("#acDetails .row p");
+      if (productDescription) {
+        productDescription.textContent = ac.description;
+      }
+
       const characteristicsList = document.querySelector("#acDetails .row ul");
-      characteristicsList.innerHTML = '';
-      ac.characteristics.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        characteristicsList.appendChild(li);
-      });
+      if (characteristicsList) {
+        characteristicsList.innerHTML = '';
+        if (ac.characteristics && Array.isArray(ac.characteristics)) {
+          ac.characteristics.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            characteristicsList.appendChild(li);
+          });
+        }
+      }
 
-      // Update price
-      document.querySelector("#acDetails .row .mt-4 span").textContent = ac.price;
+      const productPrice = document.querySelector("#acDetails .row .mt-4 span");
+      if (productPrice) {
+        productPrice.textContent = ac.price;
+      }
+
+      if (ac.technicalSpecs) {
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          if (cells.length >= 6) {
+            cells[0].textContent = ac.technicalSpecs.coolingPower || 'N/A';
+            cells[1].textContent = ac.technicalSpecs.heatingPower || 'N/A';
+            cells[2].textContent = ac.technicalSpecs.noiseLevelIndoor || 'N/A';
+            cells[3].textContent = ac.technicalSpecs.operatingTemp || 'N/A';
+            cells[4].textContent = ac.technicalSpecs.dimensionsIndoor || 'N/A';
+            cells[5].textContent = ac.technicalSpecs.warranty || 'N/A';
+          }
+        }
+      } else {
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          cells.forEach(cell => cell.textContent = 'N/A');
+        }
+      }
     }
+
+    document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      updateProductDetails();
+    });
 
     // Event listener for dropdown change
     document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);

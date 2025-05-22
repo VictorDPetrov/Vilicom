@@ -61,7 +61,8 @@
         <div class="col-md-6">
           <h4 class="text-start" style="color: #2A186B; text-align: left;">Описание на продукта</h4>
           <p class="text-start">
-            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
+            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични
+            условия. Подходящ е както за домашна, така и за офис употреба.
           </p>
 
           <h5 class="mt-4 text-start" style="color: #2A186B; text-align: left;">Основни характеристики:</h5>
@@ -84,7 +85,7 @@
     <!-- Optional Technical Table -->
     <div class="mt-5">
       <h4 class="text-start" style="color: #2A186B; text-align: left;">Технически характеристики</h4>
-      <table class="table table-bordered mt-3">
+      <table class="table table-bordered mt-3" id="technicalTable">
         <tbody>
           <tr>
             <th scope="row">Охлаждаща мощност</th>
@@ -128,109 +129,230 @@
   <script>
     // Data for different models
     const acData = {
-      perfera1: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      perfera1: { // FTXM25A (approx. 9000 BTU)
+        description: "Инверторен климатик Daikin Perfera FTXM25A – съчетание от стилен дизайн, върхова енергийна ефективност (A+++) и интелигентни технологии за пречистване на въздуха и оптимален комфорт.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 2.5 kW",
+          "Капацитет отопление (Ном.): 2.8 kW",
+          "Енергиен клас (охлаждане/отопление): A+++/A+++",
+          "Работа в режим отопление: до -20°C",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi адаптер (Daikin Residential Controller)",
+          "Технология Flash Streamer за пречистване на въздуха",
+          "2-зонов сензор 'Интелигентно око'",
+          "Изключително тиха работа: от 19 dBA"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin_perfera.jpg", // Актуализирайте с конкретна снимка
+        technicalSpecs: {
+          coolingPower: "2.50 kW (Мин:1.3/Ном:2.5/Макс:3.2)",
+          heatingPower: "2.80 kW (Мин:1.3/Ном:2.8/Макс:4.7)",
+          noiseLevelIndoor: "Охл: 19/25/41 dBA (Тих/Нисък/Висок)",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -20°C до +18°C",
+          dimensionsIndoor: "294 x 811 x 272 мм (ВxШxД)",
+          warranty: "36 месеца (Проверете опции за удължаване!)"
+        }
       },
-      perfera2: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      perfera2: { // FTXM35A (approx. 12000 BTU)
+        description: "Daikin Perfera FTXM35A предлага изключителна производителност и комфорт за средно големи помещения. Насладете се на чист въздух и перфектна температура с най-висок клас на енергийна ефективност.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 3.4 kW", // (3.5 kW class)
+          "Капацитет отопление (Ном.): 4.0 kW",
+          "Енергиен клас (охлаждане/отопление): A+++/A+++",
+          "Работа в режим отопление: до -20°C",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi адаптер (Daikin Residential Controller)",
+          "Технология Flash Streamer",
+          "3D въздушен поток",
+          "Седмичен таймер"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin_perfera.jpg", // Актуализирайте с конкретна снимка
+        technicalSpecs: {
+          coolingPower: "3.40 kW (Мин:1.4/Ном:3.4/Макс:3.8)",
+          heatingPower: "4.00 kW (Мин:1.4/Ном:4.0/Макс:5.2)",
+          noiseLevelIndoor: "Охл: 19/25/41 dBA (Тих/Нисък/Висок)", // FTXM35 може да е малко по-шумен от 25
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -20°C до +18°C",
+          dimensionsIndoor: "294 x 811 x 272 мм (ВxШxД)", // Често 25 и 35 са с еднакви размери
+          warranty: "36 месеца (Проверете опции за удължаване!)"
+        }
       },
-      perfera3: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      perfera3: { // FTXM42A (approx. 15000 BTU)
+        description: "Инверторният климатик Daikin Perfera FTXM42A е създаден за по-големи помещения, нуждаещи се от мощен, но ефективен климатичен контрол. Включва всички премиум функции на серията Perfera.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 4.2 kW",
+          "Капацитет отопление (Ном.): 5.4 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A++", // По-големите може да са A++
+          "Работа в режим отопление: до -20°C",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi адаптер (Daikin Residential Controller)",
+          "Flash Streamer и титаниев апатитен филтър",
+          "Режим 'Комфорт' без директно обдухване"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin_perfera.jpg", // Актуализирайте с конкретна снимка
+        technicalSpecs: {
+          coolingPower: "4.20 kW (Мин:1.7/Ном:4.2/Макс:5.0)",
+          heatingPower: "5.40 kW (Мин:1.7/Ном:5.4/Макс:6.0)",
+          noiseLevelIndoor: "Охл: 21/29/45 dBA (Тих/Нисък/Висок)",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -20°C до +18°C",
+          dimensionsIndoor: "294 x 811 x 272 мм (ВxШxД)", // Проверете, може да е по-голямо тяло
+          warranty: "36 месеца (Проверете опции за удължаване!)"
+        }
       },
-      perfera4: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      perfera4: { // FTXM50A (approx. 18000 BTU)
+        description: "Daikin Perfera FTXM50A осигурява мощен климатичен контрол за големи пространства. Висока ефективност, пречистване на въздуха и интелигентни сензори за максимален комфорт.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 5.0 kW",
+          "Капацитет отопление (Ном.): 5.8 kW", // Или по-висок, например 6.0kW
+          "Енергиен клас (охлаждане/отопление): A++/A++",
+          "Работа в режим отопление: до -20°C",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi адаптер (Daikin Residential Controller)",
+          "Flash Streamer технология",
+          "Функция 'Heat Boost' (Проверете за FTXM-A)"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin_perfera.jpg", // Актуализирайте с конкретна снимка
+        technicalSpecs: {
+          coolingPower: "5.00 kW (Мин:1.7/Ном:5.0/Макс:5.3)",
+          heatingPower: "5.80 kW (Мин:1.7/Ном:5.8/Макс:6.5)",
+          noiseLevelIndoor: "Охл: 24/31/46 dBA (Тих/Нисък/Висок)",
+          operatingTemp: "Охл: -10°C до +46°C / Отопл: -20°C до +18°C",
+          dimensionsIndoor: "295 x 998 x 292 мм (ВxШxД)", // По-големите модели са с по-големи тела
+          warranty: "36 месеца (Проверете опции за удължаване!)"
+        }
       },
-      perfera5: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      perfera5: { // FTXM60R (approx. 21000 BTU) - 'R' е по-нова серия
+        description: "Новото поколение Daikin Perfera FTXM60R предлага още по-висока ефективност и подобрени функции, включително 'Heat Boost' за бързо затопляне. Идеален за големи помещения.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 6.0 kW",
+          "Капацитет отопление (Ном.): 7.0 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A++ (Проверете, може да е A+++/A++)",
+          "Работа в режим отопление: до -20°C (или -25°C за R серията - Проверете!)",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi адаптер (Daikin Residential Controller)",
+          "Flash Streamer и сребърен филтър",
+          "Функция 'Heat Boost'"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin_perfera.jpg", // Актуализирайте с конкретна снимка
+        technicalSpecs: {
+          coolingPower: "6.00 kW (Мин:1.8/Ном:6.0/Макс:7.0)",
+          heatingPower: "7.00 kW (Мин:1.7/Ном:7.0/Макс:8.2)",
+          noiseLevelIndoor: "Охл: 27/34/46 dBA (Тих/Нисък/Висок)",
+          operatingTemp: "Охл: -10°C до +50°C / Отопл: -20°C (-25°C?) до +24°C", // R серията може да има разширен диапазон
+          dimensionsIndoor: "295 x 998 x 292 мм (ВxШxД)",
+          warranty: "36 месеца (Проверете опции за удължаване!)"
+        }
       },
-      perfera6: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      perfera6: { // FTXM71R (approx. 24000 BTU) - 'R' е по-нова серия
+        description: "Най-мощният модел от серията Daikin Perfera FTXM71R, предназначен за климатизация на много големи пространства без компромис с ефективността, тишината и качеството на въздуха.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
-          "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Капацитет охлаждане (Ном.): 7.1 kW",
+          "Капацитет отопление (Ном.): 8.2 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+ (Проверете!)",
+          "Работа в режим отопление: до -20°C (или -25°C за R серията - Проверете!)",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi адаптер (Daikin Residential Controller)",
+          "Flash Streamer, титаниев апатит и сребърен филтър",
+          "Функция 'Heat Boost' и интелигентно око"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/daikin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/daikin_perfera.jpg", // Актуализирайте с конкретна снимка
+        technicalSpecs: {
+          coolingPower: "7.10 kW (Мин:2.3/Ном:7.1/Макс:8.0)", // Приблизително
+          heatingPower: "8.20 kW (Мин:2.3/Ном:8.2/Макс:9.2)", // Приблизително
+          noiseLevelIndoor: "Охл: 31/37/48 dBA (Тих/Нисък/Висок)",
+          operatingTemp: "Охл: -10°C до +50°C / Отопл: -20°C (-25°C?) до +24°C",
+          dimensionsIndoor: "295 x 998 x 292 мм (ВxШxД)", // Или дори по-голямо
+          warranty: "36 месеца (Проверете опции за удължаване!)"
+        }
       }
     };
 
-    // Function to update the product details based on the selected model
     function updateProductDetails() {
-      const selectedModel = document.getElementById('acModelSelect').value;
-      const ac = acData[selectedModel];
+      const selectedModelValue = document.getElementById('acModelSelect').value;
+      const ac = acData[selectedModelValue];
 
-      // Update image
-      document.querySelector("#acDetails .row img").src = ac.image;
+      if (!ac) {
+        console.error("Данни за модела не са намерени:", selectedModelValue);
+        // Почистване на полетата или показване на съобщение за грешка
+        const productImage = document.querySelector("#acDetails .row img");
+        if (productImage) productImage.style.display = 'none';
+        const productDescription = document.querySelector("#acDetails .row p");
+        if (productDescription) productDescription.textContent = 'Информацията за избрания модел не е налична.';
+        const characteristicsList = document.querySelector("#acDetails .row ul");
+        if (characteristicsList) characteristicsList.innerHTML = '';
+        const productPrice = document.querySelector("#acDetails .row .mt-4 span");
+        if (productPrice) productPrice.textContent = '-';
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          cells.forEach(cell => cell.textContent = 'N/A');
+        }
+        return;
+      }
 
-      // Update description
-      document.querySelector("#acDetails .row p").textContent = ac.description;
+      const productImageVisible = document.querySelector("#acDetails .row img");
+      if (productImageVisible) productImageVisible.style.display = 'block';
 
-      // Update characteristics list
+      const productImage = document.querySelector("#acDetails .row img");
+      if (productImage) {
+        productImage.src = ac.image;
+        const selectedOptionText = document.getElementById('acModelSelect').options[document.getElementById('acModelSelect').selectedIndex].text;
+        productImage.alt = "Климатик Daikin Perfera " + selectedOptionText;
+      }
+
+      const productDescription = document.querySelector("#acDetails .row p");
+      if (productDescription) {
+        productDescription.textContent = ac.description;
+      }
+
       const characteristicsList = document.querySelector("#acDetails .row ul");
-      characteristicsList.innerHTML = '';
-      ac.characteristics.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        characteristicsList.appendChild(li);
-      });
+      if (characteristicsList) {
+        characteristicsList.innerHTML = '';
+        if (ac.characteristics && Array.isArray(ac.characteristics)) {
+          ac.characteristics.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            characteristicsList.appendChild(li);
+          });
+        }
+      }
 
-      // Update price
-      document.querySelector("#acDetails .row .mt-4 span").textContent = ac.price;
+      const productPrice = document.querySelector("#acDetails .row .mt-4 span");
+      if (productPrice) {
+        productPrice.textContent = ac.price;
+      }
+
+      if (ac.technicalSpecs) {
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          if (cells.length >= 6) {
+            cells[0].textContent = ac.technicalSpecs.coolingPower || 'N/A';
+            cells[1].textContent = ac.technicalSpecs.heatingPower || 'N/A';
+            cells[2].textContent = ac.technicalSpecs.noiseLevelIndoor || 'N/A';
+            cells[3].textContent = ac.technicalSpecs.operatingTemp || 'N/A';
+            cells[4].textContent = ac.technicalSpecs.dimensionsIndoor || 'N/A';
+            cells[5].textContent = ac.technicalSpecs.warranty || 'N/A';
+          }
+        }
+      } else {
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          cells.forEach(cell => cell.textContent = 'N/A');
+        }
+      }
     }
+
+    document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      updateProductDetails();
+    });
 
     // Event listener for dropdown change
     document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);

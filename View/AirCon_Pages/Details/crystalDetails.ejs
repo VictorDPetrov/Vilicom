@@ -57,7 +57,8 @@
         <div class="col-md-6">
           <h4 class="text-start" style="color: #2A186B; text-align: left;">Описание на продукта</h4>
           <p class="text-start">
-            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
+            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични
+            условия. Подходящ е както за домашна, така и за офис употреба.
           </p>
 
           <h5 class="mt-4 text-start" style="color: #2A186B; text-align: left;">Основни характеристики:</h5>
@@ -80,7 +81,7 @@
     <!-- Optional Technical Table -->
     <div class="mt-5">
       <h4 class="text-start" style="color: #2A186B; text-align: left;">Технически характеристики</h4>
-      <table class="table table-bordered mt-3">
+      <table class="table table-bordered mt-3" id="technicalTable">
         <tbody>
           <tr>
             <th scope="row">Охлаждаща мощност</th>
@@ -124,57 +125,146 @@
   <script>
     // Data for different models
     const acData = {
-      crystalTopaz1: {
-        description: "Моделът Topaz-1 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      crystalTopaz1: { // CHI-AI09H-QE - Topaz (9000 BTU)
+        description: "Инверторен климатик Crystal Topaz CHI-AI09H-QE (9000 BTU) предлага ефективно охлаждане и отопление за малки до средни помещения. Модерният дизайн и интелигентните функции осигуряват комфорт и икономия на енергия.",
         characteristics: [
-          "Капацитет охлаждане: 2.5 kW",
+          "Капацитет охлаждане: 2.6 kW", // Approx 9000 BTU
           "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа в режим отопление: до -20°C (Проверете!)",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi модул: Да (Проверете!)",
           "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Функция 'I Feel'"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/crystal.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/crystal.jpeg", // Актуализирайте, ако имате специфична снимка
+        technicalSpecs: {
+          coolingPower: "2.60 kW",
+          heatingPower: "2.80 kW",
+          noiseLevelIndoor: "21-39 dBA (Проверете!)",
+          operatingTemp: "Охлаждане: -15°C до +48°C / Отопление: -20°C до +24°C (Проверете!)",
+          dimensionsIndoor: "790 x 275 x 200 mm (Проверете!)",
+          warranty: "36 месеца (Проверете!)"
+        }
       },
-      crystalTopaz2: {
-        description: "Моделът Topaz-2 на Crystal предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      crystalTopaz2: { // CHI-AI12H-QE - Topaz (12000 BTU)
+        description: "Инверторен климатик Crystal Topaz CHI-AI12H-QE (12000 BTU) е отличен избор за по-големи стаи, нуждаещи се от надеждна климатизация. Серията QE гарантира висока ефективност и модерни функции.",
         characteristics: [
-          "Капацитет охлаждане: 3.0 kW",
-          "Капацитет отопление: 3.5 kW",
-          "Енергиен клас: A+/A",
-          "Работа при ниски температури до -20°C",
-          "Тих режим на работа",
-          "Wi-Fi управление"
+          "Капацитет охлаждане: 3.5 kW", // Approx 12000 BTU
+          "Капацитет отопление: 3.8 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа в режим отопление: до -20°C (Проверете!)",
+          "Хладилен агент: R32",
+          "Вграден Wi-Fi модул: Да (Проверете!)",
+          "Самопочистваща функция",
+          "Интелигентно обезскрежаване"
         ],
-        price: "YYY лв",
-        image: "../../Images/AC/crystal.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/crystal.jpeg", // Актуализирайте, ако имате специфична снимка
+        technicalSpecs: {
+          coolingPower: "3.50 kW",
+          heatingPower: "3.80 kW",
+          noiseLevelIndoor: "22-41 dBA (Проверете!)",
+          operatingTemp: "Охлаждане: -15°C до +48°C / Отопление: -20°C до +24°C (Проверете!)",
+          dimensionsIndoor: "850 x 285 x 210 mm (Проверете!)", // Може да е малко по-голям
+          warranty: "36 месеца (Проверете!)"
+        }
       }
     };
 
-    // Function to update the product details based on the selected model
     function updateProductDetails() {
-      const selectedModel = document.getElementById('acModelSelect').value;
-      const ac = acData[selectedModel];
+      const selectedModelValue = document.getElementById('acModelSelect').value;
+      const ac = acData[selectedModelValue];
 
-      // Update image
-      document.querySelector("#acDetails .row img").src = ac.image;
+      if (!ac) {
+        console.error("Данни за модела не са намерени:", selectedModelValue);
+        // Може да покажете съобщение на потребителя в страницата, ако желаете
+        // Например, като изчистите полетата или покажете "Информация не е налична"
+        const productImage = document.querySelector("#acDetails .row img");
+        if (productImage) productImage.style.display = 'none'; // Скрива снимката
+        const productDescription = document.querySelector("#acDetails .row p");
+        if (productDescription) productDescription.textContent = 'Информацията за избрания модел не е налична.';
+        const characteristicsList = document.querySelector("#acDetails .row ul");
+        if (characteristicsList) characteristicsList.innerHTML = '';
+        const productPrice = document.querySelector("#acDetails .row .mt-4 span");
+        if (productPrice) productPrice.textContent = '-';
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          cells.forEach(cell => cell.textContent = 'N/A');
+        }
+        return;
+      }
+
+      // Показване на елементите, ако са били скрити
+      const productImageVisible = document.querySelector("#acDetails .row img");
+      if (productImageVisible) productImageVisible.style.display = 'block';
+
+
+      // Update image and add alt text
+      const productImage = document.querySelector("#acDetails .row img");
+      if (productImage) {
+        productImage.src = ac.image;
+        const selectedOptionText = document.getElementById('acModelSelect').options[document.getElementById('acModelSelect').selectedIndex].text;
+        productImage.alt = "Климатик " + selectedOptionText;
+      }
 
       // Update description
-      document.querySelector("#acDetails .row p").textContent = ac.description;
+      const productDescription = document.querySelector("#acDetails .row p");
+      if (productDescription) {
+        productDescription.textContent = ac.description;
+      }
 
       // Update characteristics list
       const characteristicsList = document.querySelector("#acDetails .row ul");
-      characteristicsList.innerHTML = '';
-      ac.characteristics.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        characteristicsList.appendChild(li);
-      });
+      if (characteristicsList) {
+        characteristicsList.innerHTML = ''; // Clear existing items
+        if (ac.characteristics && Array.isArray(ac.characteristics)) {
+          ac.characteristics.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            characteristicsList.appendChild(li);
+          });
+        }
+      }
 
       // Update price
-      document.querySelector("#acDetails .row .mt-4 span").textContent = ac.price;
+      const productPrice = document.querySelector("#acDetails .row .mt-4 span");
+      if (productPrice) {
+        productPrice.textContent = ac.price;
+      }
+
+      // Update technical table
+      if (ac.technicalSpecs) {
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          if (cells.length >= 6) {
+            cells[0].textContent = ac.technicalSpecs.coolingPower || 'N/A';
+            cells[1].textContent = ac.technicalSpecs.heatingPower || 'N/A';
+            cells[2].textContent = ac.technicalSpecs.noiseLevelIndoor || 'N/A';
+            cells[3].textContent = ac.technicalSpecs.operatingTemp || 'N/A';
+            cells[4].textContent = ac.technicalSpecs.dimensionsIndoor || 'N/A';
+            cells[5].textContent = ac.technicalSpecs.warranty || 'N/A';
+          }
+        }
+      } else {
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td");
+          cells.forEach(cell => cell.textContent = 'N/A');
+        }
+      }
     }
+
+    // Event listener for dropdown change
+    document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);
+
+    // Initial call to populate the details for the default selected model when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+      updateProductDetails();
+    });
 
     // Event listener for dropdown change
     document.getElementById('acModelSelect').addEventListener('change', updateProductDetails);
