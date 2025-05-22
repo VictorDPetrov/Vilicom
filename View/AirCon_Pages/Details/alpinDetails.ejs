@@ -59,7 +59,8 @@
         <div class="col-md-6">
           <h4 class="text-start" style="color: #2A186B; text-align: left;">Описание на продукта</h4>
           <p class="text-start">
-            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.
+            Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични
+            условия. Подходящ е както за домашна, така и за офис употреба.
           </p>
 
           <h5 class="mt-4 text-start" style="color: #2A186B; text-align: left;">Основни характеристики:</h5>
@@ -82,7 +83,7 @@
     <!-- Optional Technical Table -->
     <div class="mt-5">
       <h4 class="text-start" style="color: #2A186B; text-align: left;">Технически характеристики</h4>
-      <table class="table table-bordered mt-3">
+      <table class="table table-bordered mt-3" id="technicalTable">
         <tbody>
           <tr>
             <th scope="row">Охлаждаща мощност</th>
@@ -125,58 +126,91 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Data for different models
+    // Data for different models
     const acData = {
-      alpin: {
-        description: "Моделът ASW-25KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      alpin: { // ASW-25KTN Nordic
+        description: "Моделът ASW-25KTN Nordic на Alpin е проектиран за ефективно отопление и охлаждане в разнообразни климатични условия, идеален за по-малки помещения.",
         characteristics: [
           "Капацитет охлаждане: 2.5 kW",
           "Капацитет отопление: 2.8 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -25°C",
-          "Тих режим на работа",
-          "Wi-Fi управление (по избор)"
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа при ниски температури (отопление): до -25°C",
+          "Тих режим на работа: Да",
+          "Wi-Fi управление: По избор"
         ],
-        price: "XXX лв",
-        image: "../../Images/AC/alpin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/alpin.jpeg", // Update if you have a specific image
+        technicalSpecs: {
+          coolingPower: "2.5 kW",
+          heatingPower: "2.8 kW",
+          noiseLevelIndoor: "21-38 dB",
+          operatingTemp: "от -25°C до +50°C",
+          dimensionsIndoor: "790 x 275 x 200 mm",
+          warranty: "36 месеца"
+        }
       },
-      model2: {
-        description: "Моделът ASW-35KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      model2: { // ASW-35KTN Nordic
+        description: "Alpin ASW-35KTN Nordic осигурява надеждно климатизиране за средно големи стаи, с отлична производителност при ниски температури.",
         characteristics: [
-          "Капацитет охлаждане: 3.0 kW",
-          "Капацитет отопление: 3.5 kW",
-          "Енергиен клас: A+/A",
-          "Работа при ниски температури до -20°C",
-          "Тих режим на работа",
-          "Wi-Fi управление"
+          "Капацитет охлаждане: 3.5 kW",
+          "Капацитет отопление: 3.8 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа при ниски температури (отопление): до -25°C",
+          "Тих режим на работа: Да",
+          "Wi-Fi управление: Вградено"
         ],
-        price: "YYY лв",
-        image: "../../Images/AC/alpin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/alpin.jpeg", // Update with specific image if available
+        technicalSpecs: {
+          coolingPower: "3.5 kW",
+          heatingPower: "3.8 kW",
+          noiseLevelIndoor: "22-40 dB (Пример - Моля, проверете!)",
+          operatingTemp: "от -25°C до +50°C (Пример - Моля, проверете!)",
+          dimensionsIndoor: "830 x 285 x 210 mm (Пример - Моля, проверете!)",
+          warranty: "36 месеца"
+        }
       },
-      model3: {
-        description: "Моделът ASW-50KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      model3: { // ASW-50KTN Nordic
+        description: "Мощният Alpin ASW-50KTN Nordic е подходящ за по-големи пространства, предлагайки стабилна работа дори при екстремни зимни условия.",
         characteristics: [
-          "Капацитет охлаждане: 4.0 kW",
-          "Капацитет отопление: 4.5 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -30°C",
-          "Тих режим на работа",
-          "Wi-Fi управление"
+          "Капацитет охлаждане: 5.0 kW",
+          "Капацитет отопление: 5.3 kW",
+          "Енергиен клас (охлаждане/отопление): A++/A+",
+          "Работа при ниски температури (отопление): до -30°C",
+          "Тих режим на работа: Да",
+          "Wi-Fi управление: Вградено"
         ],
-        price: "ZZZ лв",
-        image: "../../Images/AC/alpin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/alpin.jpeg", // Update with specific image if available
+        technicalSpecs: {
+          coolingPower: "5.0 kW",
+          heatingPower: "5.3 kW",
+          noiseLevelIndoor: "24-42 dB (Пример - Моля, проверете!)",
+          operatingTemp: "от -30°C до +50°C (Пример - Моля, проверете!)",
+          dimensionsIndoor: "960 x 300 x 220 mm (Пример - Моля, проверете!)",
+          warranty: "36 месеца"
+        }
       },
-      model4: {
-        description: "Моделът ASW-70KTN Nordic на Alpin предлага ефективно отопление и охлаждане дори при екстремни климатични условия. Подходящ е както за домашна, така и за офис употреба.",
+      model4: { // ASW-70KTN Nordic
+        description: "Alpin ASW-70KTN Nordic е върховият модел за максимален капацитет, идеален за големи помещения или офиси, гарантиращ комфорт през цялата година.",
         characteristics: [
-          "Капацитет охлаждане: 4.0 kW",
-          "Капацитет отопление: 4.5 kW",
-          "Енергиен клас: A++/A+",
-          "Работа при ниски температури до -30°C",
-          "Тих режим на работа",
-          "Wi-Fi управление"
+          "Капацитет охлаждане: 7.0 kW",
+          "Капацитет отопление: 7.4 kW",
+          "Енергиен клас (охлаждане/отопление): A+/A",
+          "Работа при ниски температури (отопление): до -30°C",
+          "Тих режим на работа: Да",
+          "Wi-Fi управление: Вградено"
         ],
-        price: "ZZZ лв",
-        image: "../../Images/AC/alpin.jpeg"
+        price: "Моля, попитайте за цена",
+        image: "../../Images/AC/alpin.jpeg", // Update with specific image if available
+        technicalSpecs: {
+          coolingPower: "7.0 kW",
+          heatingPower: "7.4 kW",
+          noiseLevelIndoor: "26-45 dB (Пример - Моля, проверете!)",
+          operatingTemp: "от -30°C до +50°C (Пример - Моля, проверете!)",
+          dimensionsIndoor: "1050 x 310 x 230 mm (Пример - Моля, проверете!)",
+          warranty: "36 месеца"
+        }
       }
     };
 
@@ -185,15 +219,18 @@
       const selectedModel = document.getElementById('acModelSelect').value;
       const ac = acData[selectedModel];
 
-      // Update image
-      document.querySelector("#acDetails .row img").src = ac.image;
+      // Update image and add alt text
+      const productImage = document.querySelector("#acDetails .row img");
+      productImage.src = ac.image;
+      productImage.alt = "Климатик " + document.getElementById('acModelSelect').options[document.getElementById('acModelSelect').selectedIndex].text;
+
 
       // Update description
       document.querySelector("#acDetails .row p").textContent = ac.description;
 
       // Update characteristics list
       const characteristicsList = document.querySelector("#acDetails .row ul");
-      characteristicsList.innerHTML = '';
+      characteristicsList.innerHTML = ''; // Clear existing items
       ac.characteristics.forEach(item => {
         const li = document.createElement('li');
         li.textContent = item;
@@ -202,6 +239,23 @@
 
       // Update price
       document.querySelector("#acDetails .row .mt-4 span").textContent = ac.price;
+
+      // Update technical table
+      if (ac.technicalSpecs) {
+        const techTable = document.getElementById('technicalTable');
+        if (techTable) {
+          const cells = techTable.querySelectorAll("tbody td"); // Get all <td> elements in tbody
+          // Ensure you have the correct number of cells and they correspond to the data
+          if (cells.length >= 6) {
+            cells[0].textContent = ac.technicalSpecs.coolingPower;
+            cells[1].textContent = ac.technicalSpecs.heatingPower;
+            cells[2].textContent = ac.technicalSpecs.noiseLevelIndoor;
+            cells[3].textContent = ac.technicalSpecs.operatingTemp;
+            cells[4].textContent = ac.technicalSpecs.dimensionsIndoor;
+            cells[5].textContent = ac.technicalSpecs.warranty;
+          }
+        }
+      }
     }
 
     // Event listener for dropdown change
