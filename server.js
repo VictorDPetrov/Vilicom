@@ -14,7 +14,7 @@ const database = require('./controller/database'),
     services = require('./routes/services'),
     airConditioners = require('./routes/airConditioners'),
     gallery = require('./routes/gallery'),
-    login = require('./routes/Admin/login'),
+    // login = require('./routes/Admin/login'),
     contact = require('./routes/contact'),
     alpin = require('./routes/AirCon_Pages/alpin'),
     carrier = require('./routes/AirCon_Pages/carrier'),
@@ -39,9 +39,9 @@ const database = require('./controller/database'),
     hisenseDetails = require("./routes/AirCon_Pages/Details/hisenseDetails"),
     greeDetails = require("./routes/AirCon_Pages/Details/greeDetails"),
     toshibaDetails = require("./routes/AirCon_Pages/Details/toshibaDetails"),
-    mitsubishiDetails = require("./routes/AirCon_Pages/Details/mitsubishiDetails"),
-    adminHome = require('./routes/Admin/adminHome'),
-    logout = require('./routes/Admin/logout')
+    mitsubishiDetails = require("./routes/AirCon_Pages/Details/mitsubishiDetails")
+    // adminHome = require('./routes/Admin/adminHome'),
+    // logout = require('./routes/Admin/logout')
 
     // Include routes
 const airConditionersRouter = require('./routes/airConditioners');
@@ -76,14 +76,14 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', homePage);
-app.use('/login', login);
-app.use('/logout', logout);
+// app.use('/login', login);
+// app.use('/logout', logout);
 app.use('/aboutUs', aboutUs);
 app.use('/services', services);
 app.use('/airConditioners', airConditioners);
 app.use('/gallery', gallery);
 app.use('/contact', contact);
-app.use('/adminHome', adminHome);
+// app.use('/adminHome', adminHome);
 app.use('/alpin', alpin);
 app.use('/carrier', carrier);
 app.use('/crystal', crystal);
