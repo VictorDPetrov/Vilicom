@@ -19,7 +19,47 @@
     }
 
     .btn-primary:hover {
-      background-color: #4A3A6E;
+      background-color: #4a3a6e;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 10px;
+      line-height: 1.3;
+      color: #5B4788;
+    }
+
+    .main-line {
+      margin-top: 12px;
+      font-size: 1.6rem;
+    }
+
+    .sub-line {
+      font-size: 1.6rem;
+    }
+
+    .logo-text:hover {
+      color: #4a3a6e;
+    }
+
+    .logo-main {
+      font-weight: bold;
+    }
+
+    .logo-sub {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2px;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -29,7 +69,14 @@
     <div class="container-fluid">
       <a href="/" class="navbar-brand logo-button">
         <img src="./Images/vilicomLogo.png" alt="Logo" width="100" height="72" class="logo-img">
+        <div class="logo-text">
+          <div class="main-line">Отопление</div>
+          <div class="sub-line">Вентилация</div>
+          <div class="sub-line">Климатизация</div>
+        </div>
       </a>
+
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -64,7 +111,7 @@
     <div class="container">
       <br>
       <h1 class="display-4">Добре дошли във Виликом!</h1> <br>
-      <p class="lead">Качествени климатични решения за всеки дом и бизнес</p>
+      <p class="lead">Климатът, който заслужавате – за вашия дом и бизнес</p>
       <a href="/airConditioners" class="btn btn-custom"
         style="background-color: #5B4788; color: white; border: none; margin-top: auto;">Разгледайте продуктите</a>
       &nbsp;&nbsp;&nbsp;

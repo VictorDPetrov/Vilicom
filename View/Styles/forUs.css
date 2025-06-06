@@ -63,10 +63,12 @@
     margin-left: 20px;
     /* Indent the list items */
     font-size: 16px;
+    text-align: left;
 }
 
 .service-category ul li {
     margin-bottom: 5px;
+    text-align: left;
 }
 
 /* Optional: Add hover effect on list items */

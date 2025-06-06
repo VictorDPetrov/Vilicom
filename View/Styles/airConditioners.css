@@ -22,6 +22,10 @@
   flex-wrap: wrap;
 }
 
+ul li, tr th {
+  text-align: left;
+}
+
 
 .brand-box {
   margin-bottom: 20px;
