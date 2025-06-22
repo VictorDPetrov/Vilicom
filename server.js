@@ -47,7 +47,7 @@ const database = require('./controller/database'),
 const airConditionersRouter = require('./routes/airConditioners');
 
 app.use(express.static('routes'));
-app.use(express.static('view'));
+app.use(express.static('View'));
 app.use(express.static('controller'));
 
 app.use('/static', express.static(path.join("/View/Images/Gallery", 'public')));
